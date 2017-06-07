@@ -1,0 +1,26 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/breakpoints';
+
+stm-process-list
+{
+	/deep/
+	{
+		h2.page-title
+		{
+			color: $color-secondary;
+			z-index: 0;
+		}	
+
+		h3.subtitle
+		{
+			color: $color-secondary !important;
+			z-index: 0 !important;
+
+			>span
+			{
+				border: 1px solid #eaeaea;
+			}
+		}				
+	}
+}
+

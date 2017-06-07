@@ -1,0 +1,156 @@
+@import '../../../../../../styles/variables';
+@import '../../../../../../styles/breakpoints';
+
+// media queries using breakpoints defined in breakpoints.scss
+@include bp-large()
+{
+	footer
+	{
+		&[role=topFooter]
+		{
+			border-top: solid 1px $color-border;
+			margin-top: 4rem;
+			padding: 4rem 0 2rem 0;
+			position: relative;
+
+			.footer__background
+			{
+				bottom: 0;
+				left: 0;
+				position: absolute;
+				right: 0;
+				top: 0;
+				z-index: -1;				
+			}
+
+			.callout
+			{
+				background-color: rgba(0,0,0,0.1);
+				border-radius: 0.325rem;
+			}
+
+			h2
+			{
+				&.section-title
+				{
+					border-color: $color-grey;
+					color: $color-grey;
+					margin: auto;
+					width: 270px;
+				}
+			}
+
+			stm-nav
+			{
+				/deep/
+				{
+					ul.menu-bar
+					{
+						list-style-type: none;
+						margin: 0;
+						padding: 0;
+
+						>li
+						{
+							font-size: 1.5rem;
+							margin: 0.125rem 0;
+
+							a
+							{
+								color:$color-grey;
+							}
+						}
+					}
+				}
+			}
+
+
+			stm-services-list-name
+			{
+				/deep/
+				{
+					ul.service-list
+					{
+						list-style-type: none;
+						margin: 0;
+						padding: 0;
+
+						>li
+						{
+							font-size: 1.5rem;
+							margin: 0.125rem 0;
+
+							a
+							{
+								color:$color-grey;
+							}
+						}
+					}
+				}
+			}
+
+
+			stm-address-list
+			{
+				/deep/
+				{
+					.vcard, abbr
+					{
+						color:$color-grey;
+						font-size: 1.25rem;
+					}			
+				}
+			}
+
+			stm-phone-number-list
+			{
+				/deep/
+				{
+					font-size: 1.75rem;
+
+					a
+					{
+						color:$color-grey;
+					}
+
+					dl dt
+					{
+						display: none;
+					}
+				}
+			}			
+			
+
+			stm-social-media-list
+			{
+				/deep/ stm-social-media-item
+				{
+					display: inline-block;
+					font-size: 3rem;
+					padding: 0 1rem;					
+
+					a
+					{
+						color: $color-grey;
+					}
+				}
+			}			
+
+			cdf-media
+			{
+				height: 100%;
+				width: 100%;
+			}
+		}	
+
+		&[role=bottomFooter]
+		{
+			background-color: $color-black;
+			color: $color-grey-medium;
+			font-family: $font-family-text;
+			font-size: 0.75rem;
+			height: 3rem;
+			line-height: 3rem;
+		}
+	}
+}

@@ -1,0 +1,31 @@
+<section class="broadcast-card" *ngIf="(BroadcastModel)">
+
+	<!--BROADCAST LOGO-->
+	<section class="row">
+		<div class="column">
+			<cdf-media [mediaModel]="BroadcastModel.Image"></cdf-media>	
+		</div>
+	</section>
+
+	<!--MEDIA OUTLET NAME-->
+	<section class="row">
+		<div class="column">
+			<h3 class="broadcast-card__title">{{BroadcastModel.MediaOutlet}}</h3>	
+		</div>
+	</section>
+
+	<!--BROADCAST DESCRIPTION-->
+	<section class="row">
+		<div class="column">
+			<p>{{BroadcastModel.Description}}</p>
+		</div>
+	</section>
+
+	<!--BROADCAST SCHEDULE-->
+	<section class="row">
+		<div class="column">
+			<p *ngFor="let schedule of BroadcastModel.Schedule">{{schedule.Key}} {{schedule.Value}}</p>
+		</div>
+	</section>
+
+</section>

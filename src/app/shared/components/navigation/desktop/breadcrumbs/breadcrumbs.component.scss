@@ -1,0 +1,123 @@
+@import '../../../../../../styles/variables';
+@import '../../../../../../styles/breakpoints';
+
+
+// media queries using breakpoints defined in breakpoints.scss
+@include bp-large()
+{
+	.breadcrumb-container
+	{
+		background-color: $breadCrumbBackground;
+		height: $breadCrumbHeight;
+
+		#crumbs 
+		{
+			text-align: center;
+
+			ul
+			{
+				list-style: none;
+				display: inline-table;
+				margin: 0;
+				padding: 0;
+
+				li
+				{
+					display: inline;
+
+					a
+					{
+						background: $breadCrumbBackgroundSection;
+						color: $breadCrumbFont;
+						display: block;
+						float: left;
+						font-size: 1.125rem;
+						height: $breadCrumbHeight;
+						line-height: $breadCrumbHeight;
+						margin: 0; 
+						padding: 0 20px 0 40px;
+						position: relative;
+						text-align: center;						
+						text-decoration: none;
+
+						&:before
+						{
+							border-bottom: $breadCrumbBeforeAfterHeight solid transparent;
+							border-left: $breadCrumbBeforeAfterHeight solid #d4f2ff;
+							border-top: $breadCrumbBeforeAfterHeight solid transparent;
+							content: "";  
+							position: absolute; left: 0; top: 0;
+						}
+
+						&:after
+						{
+							border-bottom: $breadCrumbBeforeAfterHeight solid transparent;
+							border-left: $breadCrumbBeforeAfterHeight solid $breadCrumbBackgroundSection;
+							border-top: $breadCrumbBeforeAfterHeight solid transparent;
+							content: "";  
+							position: absolute; right: -$breadCrumbBeforeAfterHeight; top: 0;
+							z-index: 1;
+						}
+
+						&:hover
+						{
+							background-color: $breadCrumbBackgroundHover;
+
+							&:after
+							{
+								border-left-color: $breadCrumbBackgroundHover;
+							}
+						}
+					}
+
+					&:first-child
+					{
+						a
+						{
+							background-color: $breadCrumbBackground;
+							padding: 0 0 0 10px;
+
+							&:after
+							{
+								border-bottom: $breadCrumbBeforeAfterHeight solid transparent;
+								border-left: $breadCrumbBeforeAfterHeight solid $breadCrumbBackground;
+								border-top: $breadCrumbBeforeAfterHeight solid transparent;
+							}
+							
+							&:before
+							{
+								display: none; 
+							}
+
+							&:hover
+							{
+								background-color: $breadCrumbBackgroundHover;
+
+								&:after
+								{
+									border-left-color: $breadCrumbBackgroundHover;
+								}
+							}							
+						}
+					}
+
+					&:last-child
+					{
+						a
+						{
+							background-color: $breadCrumbBackground;
+							color: $color-secondary;
+							cursor: default;
+							padding-right: 20px;
+						
+							&:after
+							{
+								display: none; 
+							}
+						}
+					}
+				}
+			}
+		}	
+	}		
+}

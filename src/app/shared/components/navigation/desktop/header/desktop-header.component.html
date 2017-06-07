@@ -1,0 +1,40 @@
+<section class="nav-desktop-container">
+
+	<header role="banner">
+		<ul class="menu-bar">
+			<li class="logo">
+				<a routerLink="/home" pageScroll [pageScrollDuration]="0" [overrideScrollToYValue]="0" href="#homePageTop">
+					<h1 class="logo">Screwtop Media</h1>
+				</a>
+			</li>
+			<li [routerLinkActive]="'active'">
+				<a routerLink="/services" (click)="onNavItemCicked()">Services</a>
+			</li>
+			<li [routerLinkActive]="'active'">
+				<a routerLink="/projects" (click)="onNavItemCicked()">Portfolio</a>
+			</li>
+			<li [routerLinkActive]="'active'">
+				<a routerLink="/contact-us" (click)="onNavItemCicked()">Contact Us</a>
+			</li>
+			<li [routerLinkActive]="'active'">
+				<a routerLink="/productions" (click)="onNavItemCicked()">Social Media</a>
+			</li>
+			<li [routerLinkActive]="'active'">
+				<a routerLink="/about-us" (click)="onNavItemCicked()">About Us</a>
+			</li>
+		</ul>
+
+		<!--BREADCRUMBS-->
+		<stm-breadcrumbs></stm-breadcrumbs>
+	</header>
+</section>
+
+
+<main>
+	<!--PAGE CONTENT INJECTED HERE-->
+	<ng-content></ng-content>
+</main>
+
+
+<!--FOOTER-->
+<stm-desktop-footer></stm-desktop-footer>

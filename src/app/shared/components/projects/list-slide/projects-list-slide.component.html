@@ -1,0 +1,46 @@
+<section class="text-center" *ngIf="(ProjectsPageModel)">
+	<article id="slide{{outerIndex}}" class="slide small" *ngFor="let item of ProjectsPageModel.ProjectsList; let outerIndex = index" [class.firstSlide]="(outerIndex === 0)">
+		<div class="pin-wrapper">
+			
+			<div class="row">
+				<div class="column">
+					<h2 id="ProjectsTitle-{{outerIndex}}" class="page-title">Projects</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="column align-self-top">
+					<cdf-media [mediaModel]="item"></cdf-media>
+				</div>
+				<div class="column flex-container flex-dir-column">
+					<div class="flex-child-shrink">
+						<h3 class="project__subtitle">{{item.Title}}</h3>
+					</div>
+					<div class="flex-child-shrink">
+						<p class="project__description">{{item.Description}}</p>
+					</div>
+					<div class="flex-child-auto">
+						<a (click)="onLearnMoreClick(item)" class="button medium hollow radius">Learn More</a>
+					</div>
+				</div>
+			</div>     
+			<div class="row">
+				<div class="column align-self-top">
+					<div class="projectIndicatorContainer">
+						<i class="fa " *ngFor="let circle of ProjectsPageModel.ProjectsList; let innerIndex = index" [class.fa-circle]="(innerIndex === outerIndex)"
+							[class.fa-circle-thin]="(innerIndex !== outerIndex)"></i>
+					</div>
+				</div>                            
+			</div>
+			<div class="row">
+				<div class="column align-self-top">
+					<h3 class="learnMoreContainer__title">
+						<i class="fa " [class.fa-arrow-down]="(outerIndex < ProjectsPageModel.ProjectsList.length-1)"></i>                                        
+							More Projects
+						<i class="fa " [class.fa-arrow-up]="((outerIndex < ProjectsPageModel.ProjectsList.length) && (outerIndex > 0))"></i>
+					</h3>
+				</div>
+			</div>
+			
+		</div>
+	</article>
+</section>

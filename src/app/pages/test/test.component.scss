@@ -1,0 +1,18 @@
+@import '../../../styles/variables';
+@import '../../../styles/breakpoints';
+
+header
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+.container 
+{
+	border: solid 1px red;
+	height: 90vh;
+	margin: 110px 0 0 0;
+	width: 90vw;
+}

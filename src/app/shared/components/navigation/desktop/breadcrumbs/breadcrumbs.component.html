@@ -1,0 +1,19 @@
+<section class="breadcrumb-container" *ngIf="hasBreadCrumbs">
+	<section class="row align-center">
+		<div class="column">
+			<div id="crumbs">
+				<ul>
+					<li>
+						<a href="" (click)="GoToHomeState()" title="Go to home page">
+							<i class="fa fa-home"></i> Screwtop
+						</a>
+					</li>
+					<li *ngFor="let breadcrumb of breadcrumbService.BreadCrumbList">
+						<a (click)="GoToBreadcrumb(breadcrumb)" title="{{breadcrumb.Title}}">{{breadcrumb.Name}}</a>
+					</li>
+					<li><a>{{breadcrumbService.PageName}}</a></li>
+				</ul>
+			</div>
+		</div>
+	</section>
+</section>

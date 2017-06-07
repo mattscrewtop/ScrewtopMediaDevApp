@@ -1,0 +1,32 @@
+<section class="media-production-container" *ngIf="mediaProduction">
+	<!--MEDIA INTRODUCTION-->
+	<section class="row align-center">
+		<div class="column">
+			<p class="page-introduction" [innerHTML]="mediaProduction.Introduction"></p>
+		</div>
+	</section>
+
+	<!--MEDIA LOGO-->
+	<section class="row align-center">
+		<div class="column">
+			<cdf-media class="media-production-container__image" [mediaModel]="mediaProduction.Image"></cdf-media>
+		</div>
+	</section>
+
+	<!--MEDIA BROADCAST CARDS-->
+	<section class="row align-center">
+		<div class="column small-4" *ngFor="let broadcast of mediaProduction.BroadcastList">
+			<stm-broadcast [BroadcastModel]="broadcast"></stm-broadcast>
+		</div>
+	</section>
+
+	<section class="row align-center align-middle">
+		<!--MEDIA DESCRIPTION-->
+		<div class="columns small-6">
+			<div class="media-production-container__description" [innerHTML]="mediaProduction.Description"></div>
+		</div>
+	</section>
+
+	<!--MEDIA SHOW SAMPLES-->
+	<stm-media-production-show-list [mediaProductionId]="mediaProduction.Id"></stm-media-production-show-list>
+</section>

@@ -1,0 +1,41 @@
+//ZURB STYLES...
+@import '../node_modules/foundation-sites/scss/foundation';
+
+@include foundation-global-styles;
+@include foundation-flex-grid;
+@include foundation-flex-classes;
+@include foundation-typography;
+@include foundation-button;
+@include foundation-badge;
+@include foundation-callout;
+@include foundation-close-button;
+@include foundation-media-object;
+@include foundation-visibility-classes;
+
+@each $breakpoint in $breakpoint-classes 
+{
+	@if $breakpoint == small 
+	{
+	// Do nothing
+	} 
+	@else 
+	{
+		@include breakpoint($breakpoint) 
+		{
+			.#{$breakpoint}-shrink 
+			{
+				flex: 0 0 auto;
+				max-width: 100%;
+			}
+		}
+	}
+}
+
+//APPLICATION STYLES...
+@import 'styles/variables';
+@import 'styles/components/overrides';
+@import 'styles/components/common';
+@import 'styles/components/fonts';
+@import 'styles/components/headers';
+@import 'styles/components/buttons';
+@import 'styles/components/page';

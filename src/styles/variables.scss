@@ -1,0 +1,117 @@
+/********************************************************
+COLORS
+********************************************************/
+$color-primary:						#262626;
+$color-secondary:					#F24F05;
+$color-tertiary:					rgba(193, 193, 193,1);
+$color-quaternary:					#79a503;
+
+$color-white: 						#fff;
+$color-grey: 						#ccc;
+$color-grey-medium: 				#636363;
+$color-grey-dark: 					#363636;
+$color-black:						#262626;
+$color-transparent-grey:		 	rgba(0, 0, 0, 0.8);
+
+$color-flat-font:					#5b5b5b;
+
+$color-project:  					#E92100;
+$color-service:  					#FF7E00;
+$color-production:  				#0189E9;
+
+//BORDERS
+$color-border:						rgb(225, 232, 237);
+$color-border-medium:				#9AA3A7;
+$color-border-dark:					#262626;
+
+//BACKGROUND COLORS
+$color-background:					#F8F8F8;
+$color-background-hover:			#EDEDED;
+$color-background-opaque:			#edf2f7;
+$color-background-active:			#FFFEEE;
+$color-background-black:			rgba(0, 0, 0, 0.2);
+$color-background-image: 			#d4d4d4;
+
+//ERRORS, WARNINGS, SUCCESS 
+$color-error:						#B5121B;
+$color-error-background:			#FACCC4;
+$color-warning:						#E67800;
+$color-success:						#598920;
+
+//FOOTER
+$color-background-footer:			#F3F5F8;
+$color-background-footer-bottom:	#e7e7e7;
+
+
+
+
+/********************************************************
+BREADCRUMBS
+********************************************************/
+$breadCrumbHeight:					3rem;
+$breadCrumbBeforeAfterHeight:		1.5rem;
+$breadCrumbBorderDark:				#CBCED1;
+$breadCrumbBackground:				rgba(48, 48, 48, 1);
+$breadCrumbBackgroundSection:		rgba(68, 68, 68, 1);
+$breadCrumbBackgroundHover:			#293032;	
+$breadCrumbFont:					#969696;
+$breadCrumbFontPage:				#fff;
+
+
+
+/********************************************************
+BOX SHADOWS
+********************************************************/
+$btn-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+$btn-box-shadow-hover: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+
+
+
+/********************************************************
+FONT-FAMILIES
+********************************************************/
+$font-family-header:				'OpenSansRegular';
+$font-family-subheader:				'OpenSansRegular';
+$font-family-text:					'OpenSansRegular';
+$font-family-text-slim:				'OpenSansLight';
+
+
+
+/********************************************************
+HEIGHTS
+********************************************************/
+$height-mobile-page:				120vh;
+
+
+
+/********************************************************
+ZURB BREAKPOINTS
+//   small: rem-calc(0),
+//   medium: rem-calc(640),
+//   large: rem-calc(1024),
+//   xlarge: rem-calc(1440),
+//   xxlarge: rem-calc(1920),
+********************************************************/
+//0
+$smallPortraitMinWidth:           	0;
+
+//20rem = 320px
+$smallPortraitMaxWidth:           	20rem;
+
+//20.0625rem = 321px
+$smallLandscapeMinWidth:         	20.0625rem;
+
+//39.9999rem = 639px
+$smallLandscapeMaxWidth:         	39.9999rem;
+
+//40rem = 640px
+$mediumMinWidth:         			40rem;
+
+//48rem = 768px
+$mediumMidWidth:         			48rem;
+
+//64rem = 1024px
+$mediumMaxWidth:         			64rem;
+
+//64.0625rem = 1025px
+$largeMinWidth:         			64.0625rem;

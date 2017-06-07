@@ -1,0 +1,15 @@
+@import '../../../../../styles/variables';
+@import '../../../../../styles/breakpoints';
+
+
+.media-production-list-container
+{
+	// media queries using breakpoints defined in breakpoints.scss
+	@include bp-medium()
+	{
+		h2.page-title
+		{
+			font-size: 4rem;
+		}
+	}	
+}

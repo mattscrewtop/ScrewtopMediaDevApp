@@ -1,0 +1,69 @@
+<stm-desktop-header [isHomeInView]='isHomeInView' [isServicesInView]='isServicesInView' [isProjectsInView]='isProjectsInView'
+    [isProcessInView]='isProcessInView' [isProductionsInView]='isProductionsInView'>
+
+    <section id="homePageTop" class="page-container" *ngIf="PageData">
+
+        <!--PAGE HEADER-->
+        <header id="intro" class="text-center" role="page" isInView (notify)='onNotifyHomeInView($event)'>
+            <!--PAGE MEDIA-->
+            <cdf-video-background [mediaModel]="PageData.BackgroundVideo"></cdf-video-background>
+
+            <div id="introWelcomeMessage" class="header-container">
+
+                <section class="row align-center">
+                    <div class="column large-6">
+                        <div class="shadow">
+                            <h1 class="logo">Screwtop Media</h1>
+                            <h2>{{PageData.Description}}</h2>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </header>
+
+        <!--MAIN CONTENT ON HOME PAGE-->
+        <div class="main-container">
+
+            <!--SOCIAL MEDIA LIST-->
+            <section class="text-center">
+                <stm-social-media-list></stm-social-media-list>
+            </section>
+
+
+            <!-- LEARN MORE -->
+            <div id="learnMoreContainer" class="learnMoreContainer text-center">
+                <section class="align-center">
+                    <h3 class="learnMoreContainer__title">
+                        <i class="fa fa-arrow-down"></i> Learn More...
+                    </h3>
+                </section>
+            </div>
+
+
+            <!-- SERVICES -->
+            <div id="serviceContainer" class="serviceContainer" isInView (notify)='onNotifyServiceInView($event)'>
+                <stm-services-list></stm-services-list>
+            </div>
+
+
+            <!-- PROJECTS -->
+            <div id="projectContainer" class="projectContainer" isInView (notify)='onNotifyProjectInView($event)'>
+                <stm-projects-list-slide (NotifyProjectCount)="onNotifyProjectCount($event)"></stm-projects-list-slide>
+            </div>
+
+
+            <!-- 6-STEP PROCESS -->
+            <div id="processContainer" class="processContainer" isInView (notify)='onNotifyProcessInView($event)'>
+                <stm-process-list></stm-process-list>
+            </div>
+
+
+            <!-- PRODUCTIONS -->
+            <div id="productionContainer" class="productionContainer" isInView (notify)='onNotifyProductionInView($event)'>
+                <stm-media-production-list></stm-media-production-list>
+            </div>
+        </div>
+
+    </section>
+</stm-desktop-header>

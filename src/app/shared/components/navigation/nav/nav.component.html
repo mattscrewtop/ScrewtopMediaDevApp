@@ -1,0 +1,29 @@
+
+<ul class="menu-bar">
+	<li class="logo" *ngIf="IsLogoVisible">
+		<h1>
+			<a routerLink="/home" (click)="onNavItemCicked()">Screwtop Media</a>
+		</h1>
+	</li>
+	<li [routerLinkActive]="'active'">
+		<a routerLink="/services" (click)="onNavItemCicked()">Service</a>
+	</li>
+	<li [routerLinkActive]="'active'">
+		<a routerLink="/projects" (click)="onNavItemCicked()">Portfolio</a>
+	</li>
+	<li [routerLinkActive]="'active'">
+		<a routerLink="/productions" (click)="onNavItemCicked()">Social Media</a>
+	</li>
+	<li [isRouterLinkActive]="'active'">
+		<a routerLink="/contact-us" (click)="onNavItemCicked()">Contact Us</a>
+	</li>
+	<li [isRouterLinkActive]="'active'">
+		<a routerLink="/about-us" (click)="onNavItemCicked()">About Us</a>
+	</li>
+	<!--<li [routerLinkActive]="'active'">
+		<a routerLink="/process" (click)="onNavItemCicked()">Process</a>
+	</li>
+	<li [routerLinkActive]="'active'">
+		<a routerLink="/productions" (click)="onNavItemCicked()">Productions</a>
+	</li>-->
+</ul>

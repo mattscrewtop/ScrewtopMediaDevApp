@@ -1,0 +1,48 @@
+@import '../../../../../styles/variables';
+@import '../../../../../styles/breakpoints';
+
+
+.processContainer
+{
+	&__info
+	{
+		text-align: left;
+		padding: 0;
+	}	
+
+	@include bp-medium()
+	{
+		h2.page-title
+		{
+			color: $color-white;
+			font-size: 4rem;
+			margin-top: 0;
+			position: relative;
+			z-index: 2;
+		}		
+	}
+
+	h3.subtitle
+	{
+		color: $color-white;
+		font-family: QuatroSlabBold;
+		font-size: 1.85rem;
+		margin: 0;
+		overflow: visible;
+		position: relative;
+		text-align: left;
+		white-space: nowrap;
+		z-index: 2;		
+
+		>span
+		{
+			border: 1px solid #eaeaea;
+			border-radius: 50%;
+			display: inline-block;
+			height: 54px;
+			padding: 0.35rem;
+			text-align: center;
+			width: 54px;			
+		}
+	}
+}

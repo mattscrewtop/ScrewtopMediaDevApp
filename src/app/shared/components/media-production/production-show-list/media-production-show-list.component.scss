@@ -1,0 +1,24 @@
+@import '../../../../../styles/variables';
+@import '../../../../../styles/breakpoints';
+
+
+cdf-media
+{
+	cursor: pointer;
+	margin: 0;
+	padding: 0;
+	height: 45vh;
+	width: 100%;
+
+	// media queries using breakpoints defined in breakpoints.scss
+	@include bp-custom-multiple('min-width : 28rem', 'max-width : 40rem')
+	{
+		height: 30vh;
+	}
+
+	@include bp-custom('min-width : 40.0625rem')
+	{
+		height: 25vh;
+	}		
+}
+

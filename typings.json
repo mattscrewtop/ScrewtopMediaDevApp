@@ -1,0 +1,5 @@
+{
+  "globalDependencies": {
+    "offline-js": "registry:dt/offline-js#0.7.14+20160316155526"
+  }
+}

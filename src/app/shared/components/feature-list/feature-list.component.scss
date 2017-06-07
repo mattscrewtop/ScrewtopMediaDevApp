@@ -1,0 +1,213 @@
+@import '../../../../styles/variables';
+
+cdf-media-slider
+{
+    height: 276px;
+
+	/deep/
+	{
+		cdf-media
+		{
+			/deep/
+			{
+				.cdf-media-title
+				{
+					bottom: 0;
+					color: $color-white;	
+					font-family: Capture;
+					left: 0;
+					letter-spacing: 3px;
+					line-height: 1;
+					margin: auto;
+					opacity: .85;
+					padding: 25% 0;
+					position: absolute;
+					right: 0;
+					text-shadow: -1px -1px 0 $color-black, 1px -1px 0 $color-black, -1px 1px 0 $color-black, 1px 1px 0 $color-black;
+					transform: rotate(3deg);			
+					top: 0;
+				}
+
+				.cdf-media-type
+				{
+					font-size: 1rem;
+				}
+			}		
+		}								
+	}
+}
+
+.column
+{
+	&:nth-child(2n)
+	{
+		cdf-media-slider
+		{
+			/deep/
+			{
+				cdf-media
+				{
+					/deep/
+					{
+						.cdf-media-title
+						{
+							transform: rotate(-3deg) !important;	
+						}
+					}		
+				}								
+			}			
+		}
+	}
+}
+
+
+.info-pane-container
+{
+	padding: 1rem;
+	overflow: hidden;
+	z-index: 100;
+
+	&__title
+	{
+		margin: 0 0 1rem 0;
+	}
+
+	&__button
+	{
+		margin: 2rem 0 0 0;
+	}
+}	
+
+/* CUSTOM SINGLE COLUMN */
+//23.4375rem = 375px
+@media only screen and (min-width : 23.4375rem)
+{	
+	cdf-media-slider
+	{
+		height: 324px;
+	}	
+}
+
+/* CUSTOM SINGLE COLUMN */
+//26.5625rem = 425px
+@media only screen and (min-width : 26.5625rem)
+{	
+	cdf-media-slider
+	{
+		height: 365px;
+	}	
+}
+
+
+
+/* SMALL - PORTRAIT */
+//20rem = 320px
+@media only screen and (max-width : $smallPortraitMaxWidth)
+{
+}
+
+
+/* SMALL - LANDSCAPE */
+//20.0625rem = 321px	
+//39.9999rem = 639px
+@media only screen and (min-width : $smallLandscapeMinWidth) and (max-width : $smallLandscapeMaxWidth) and (orientation : landscape)
+{	
+}
+
+
+/* CUSTOM - 500px */
+@media only screen and (min-width : 500px)
+{
+}
+
+
+/* MEDIUM */
+//40rem = 640px
+@media only screen and (min-width : $mediumMinWidth)
+{
+	cdf-media-slider
+	{
+		height: 225px;
+
+		/deep/
+		{
+			cdf-media
+			{
+				/deep/
+				{
+					.cdf-media-title
+					{
+						font-size: 2.50rem;
+					}
+
+					.cdf-media-type
+					{
+						font-size: 1.25rem;
+					}
+				}		
+			}								
+		}
+	}	
+}
+
+
+/* MEDIUM - PORTRAIT*/
+//40rem = 640px		
+//64rem = 1024px 
+@media only screen and (min-width : $mediumMinWidth) and (max-width : $mediumMaxWidth) and (orientation : portrait)
+{
+}
+
+
+/* MEDIUM - LANDSCAPE */
+//40rem = 640px		
+//64rem = 1024px
+@media only screen and (min-width : $mediumMinWidth) and (max-width : $mediumMaxWidth) and (orientation : landscape)
+{	
+}
+
+
+/* MEDIUM - MID */
+//48rem = 768px
+@media only screen and (min-width : $mediumMidWidth)
+{
+}
+
+
+/* CUSTOM TRIPLE COLUMN */
+//64rem = 1024px
+@media only screen and (min-width : 64rem)
+{	
+	cdf-media-slider
+	{
+		height: 295px;
+	}	
+}
+
+
+/* LARGE */
+//64.0625rem = 1025px
+@media only screen and (min-width: $largeMinWidth)
+{
+	cdf-media-slider
+	{
+		/deep/
+		{
+			cdf-media
+			{
+				/deep/
+				{
+					.cdf-media-title
+					{
+						font-size: 3.25rem;
+					}
+
+					.cdf-media-type
+					{
+						font-size: 1.5rem;
+					}
+				}		
+			}								
+		}
+	}	
+}

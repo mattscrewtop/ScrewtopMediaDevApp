@@ -1,0 +1,30 @@
+@import '../variables';
+@import '../breakpoints';
+
+html
+{
+	margin: 0;
+	height: 100%;
+	width: 100%;
+	font-size: 100%; /* equates to ~16px.  Used for rem */
+}
+
+body
+{
+	background-color: $color-background;
+	background-repeat: repeat;
+	color: $color-black;
+	font-size: 16px;
+	font-family: $font-family-text;
+	height: 100%;
+	line-height: 1.25;
+	margin: 0;
+	width: 100%;
+}
+
+
+.slide .scrollmagic-pin-spacer
+{
+	position: absolute !important;
+	clip: rect(auto, auto, auto, auto);
+}

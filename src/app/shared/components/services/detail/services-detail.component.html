@@ -1,0 +1,45 @@
+<section class="service-detail-container" *ngIf="(PageData)">
+
+	<!-- SERVICE MEDIA -->
+	<section class="row">
+		<div class="column">
+			<cdf-media [mediaModel]="PageData.MediaModel"></cdf-media>
+		</div>
+	</section>
+
+	<!--TYPE-->
+	<section class="row">
+		<div class="column">
+			<span class="service-detail-container__type">service</span>
+		</div>
+	</section>
+
+	<!--SERVICE TITLE-->
+	<section class="row">
+		<div class="column">
+			<h2 class="service-detail-container__title">{{PageData.Title}}</h2>
+		</div>
+	</section>
+
+	<!--SERVICE DESCRIPTION-->
+	<section class="row">
+		<div class="column">
+			<p class="service-detail-container__intro" [innerHTML]="PageData.Description"></p>
+		</div>
+	</section>
+
+	<!--SERVICE BODY-->
+	<section class="row">
+		<div class="column">
+			<span [innerHTML]="PageData.Body"></span>
+		</div>
+	</section>
+
+	<!--SERVICE LIST-->
+	<section class="row" *ngFor="let entry of PageData.ServicesList">
+		<div class="column">
+			<stm-sub-services-detail [subService]="entry"></stm-sub-services-detail>
+		</div>
+	</section>
+
+</section>

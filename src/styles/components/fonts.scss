@@ -1,0 +1,116 @@
+/*#region FONTS */
+
+	/* AmericanTypeWriter */
+	@font-face {
+		font-family: 'AmericanTypeWriter';
+		src: url('/assets/fonts/AmericanTypeWriter/american-typewriter.eot');
+		src: url('/assets/fonts/AmericanTypeWriter/american-typewriter.eot?#iefix') format('embedded-opentype'),
+			 url('/assets/fonts/AmericanTypeWriter/american-typewriter.woff') format('woff'),
+			 url('/assets/fonts/AmericanTypeWriter/american-typewriter.ttf') format('truetype'),
+			 url('/assets/fonts/AmericanTypeWriter/american-typewriter.svg#americanTypewriter') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}
+
+
+
+	/* OpenSansLight */
+	@font-face {
+		font-family: 'OpenSansLight';
+		src: url('/assets/fonts/OpenSans/OpenSans-Light-webfont.eot');
+		src: url('/assets/fonts/OpenSans/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+			 url('/assets/fonts/OpenSans/OpenSans-Light-webfont.woff') format('woff'),
+			 url('/assets/fonts/OpenSans/OpenSans-Light-webfont.ttf') format('truetype'),
+			 url('/assets/fonts/OpenSans/OpenSans-Light-webfont.svg#opensansLight') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}
+
+	/* OpenSansRegular */
+	@font-face {
+		font-family: 'OpenSansRegular';
+		src: url('/assets/fonts/OpenSans/OpenSans-Regular-webfont.eot');
+		src: url('/assets/fonts/OpenSans/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+			 url('/assets/fonts/OpenSans/OpenSans-Regular-webfont.woff') format('woff'),
+			 url('/assets/fonts/OpenSans/OpenSans-Regular-webfont.ttf') format('truetype'),
+			 url('/assets/fonts/OpenSans/OpenSans-Regular-webfont.svg#opensansregular') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}
+
+	/* OpenSansSemibold */
+	@font-face {
+		font-family: 'OpenSansSemibold';
+		src: url('/assets/fonts/OpenSans/OpenSans-Semibold-webfont.eot');
+		src: url('/assets/fonts/OpenSans/OpenSans-Semibold-webfont.eot?#iefix') format('embedded-opentype'),
+			 url('/assets/fonts/OpenSans/OpenSans-Semibold-webfont.woff') format('woff'),
+			 url('/assets/fonts/OpenSans/OpenSans-Semibold-webfont.ttf') format('truetype'),
+			 url('/assets/fonts/OpenSans/OpenSans-Semibold-webfont.svg#opensanssemibold') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}
+
+	/* OpenSansBold */
+	@font-face {
+		font-family: 'OpenSansBold';
+		src: url('/assets/fonts/OpenSans/OpenSans-Bold-webfont.eot');
+		src: url('/assets/fonts/OpenSans/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+			 url('/assets/fonts/OpenSans/OpenSans-Bold-webfont.woff') format('woff'),
+			 url('/assets/fonts/OpenSans/OpenSans-Bold-webfont.ttf') format('truetype'),
+			 url('/assets/fonts/OpenSans/OpenSans-Bold-webfont.svg#opensansbold') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}
+
+
+
+	/* QuatroSlabBold */
+	@font-face {
+		font-family: 'QuatroSlabBold';
+		src: url('/assets/fonts/QuatroSlab/quatroslab-bold-webfont.eot');
+		src: url('/assets/fonts/QuatroSlab/quatroslab-bold-webfont.eot?#iefix') format('embedded-opentype'),
+			 url('/assets/fonts/QuatroSlab/quatroslab-bold-webfont.woff') format('woff'),
+			 url('/assets/fonts/QuatroSlab/quatroslab-bold-webfont.ttf') format('truetype'),
+			 url('/assets/fonts/QuatroSlab/quatroslab-bold-webfont.svg#opensansLight') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}
+
+	/* QuatroSlabSemiBold */
+	@font-face {
+		font-family: 'QuatroSlabSemiBold';
+		src: url('/assets/fonts/QuatroSlab/quatroslab-semibold-webfont.eot');
+		src: url('/assets/fonts/QuatroSlab/quatroslab-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+			 url('/assets/fonts/QuatroSlab/quatroslab-semibold-webfont.woff') format('woff'),
+			 url('/assets/fonts/QuatroSlab/quatroslab-semibold-webfont.ttf') format('truetype'),
+			 url('/assets/fonts/QuatroSlab/quatroslab-semibold-webfont.svg#opensansLight') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}
+
+	/* QuatroSlabUltraBlack */
+	@font-face {
+		font-family: 'QuatroSlabUltraBlack';
+		src: url('/assets/fonts/QuatroSlab/quatroslab-ultrablack-webfont.eot');
+		src: url('/assets/fonts/QuatroSlab/quatroslab-ultrablack-webfont.eot?#iefix') format('embedded-opentype'),
+			 url('/assets/fonts/QuatroSlab/quatroslab-ultrablack-webfont.woff') format('woff'),
+			 url('/assets/fonts/QuatroSlab/quatroslab-ultrablack-webfont.ttf') format('truetype'),
+			 url('/assets/fonts/QuatroSlab/quatroslab-ultrablack-webfont.svg#opensansLight') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}
+
+
+
+	/* Capture */
+	@font-face {
+		font-family: 'Capture';
+		src: url('/assets/fonts/Capture/Capture_it-webfont.eot');
+		src: url('/assets/fonts/Capture/Capture_it-webfont.eot?#iefix') format('embedded-opentype'),
+			url('/assets/fonts/Capture/Capture_it-webfont.woff') format('woff'),
+			url('/assets/fonts/Capture/Capture_it-webfont.ttf') format('truetype'),
+			url('/assets/fonts/Capture/Capture_it-webfont.svg#capture_itregular') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}	
+/*#endregion */

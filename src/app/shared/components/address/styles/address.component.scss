@@ -1,0 +1,38 @@
+@import '../../../../../styles/variables';
+@import '../../../../../styles/breakpoints';
+
+
+.address-list-container
+{
+	.area__title
+	{
+		color: $color-black;
+		font-size: 1.25rem;
+		text-align: left;		
+		text-transform: uppercase;
+
+		&+section
+		{
+			margin: 0.5rem 1rem;
+		}	
+	}	
+}
+
+.vcard
+{
+	color: $color-primary;
+	font-family: $font-family-subheader;
+	font-size: 1.125rem;
+	padding: 0.5rem;
+	position: relative;
+	text-align: left;
+
+	.adr
+	{
+		>div
+		{
+			margin: 0 0 0.25rem 0;
+		}
+	}
+}
+

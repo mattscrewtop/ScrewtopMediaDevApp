@@ -1,0 +1,14 @@
+<address class="vcard">
+	<div class="adr">
+		<div class="street-address">{{addressModel.AddressLine1}}</div>
+		<div class="street-address" *ngIf="(addressModel.AddressLine2)">{{addressModel.AddressLine2}}</div>
+		
+		<div>
+			<span class="locality">{{addressModel.City}},</span>&nbsp; 
+			<abbr class="region">{{addressModel.State}}</abbr>&nbsp;&nbsp;
+			<span class="postal-code">{{addressModel.ZipCode}}</span>
+		</div>
+
+		<div class="country-name">{{addressModel.Country}}</div>
+	</div>
+</address>

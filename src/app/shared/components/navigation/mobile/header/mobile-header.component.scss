@@ -1,0 +1,134 @@
+@import '../../../../../../styles/variables';
+@import '../../../../../../styles/breakpoints';
+
+
+.nav-mobile-container
+{
+    background-color: $color-primary;
+    background-image: url('/assets/images/Navigation-BG.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+	height: $height-mobile-page;
+	position: relative;
+
+	&__wrapper
+	{
+		background-color: rgba(0, 0, 0, 0.35);
+		height: $height-mobile-page;
+	}
+
+	&__slideout-menu
+	{
+		left: 2rem;
+		position: absolute;
+		top: 1.5rem;		
+	}		
+
+	&__title
+	{
+		color: $color-grey;
+		font-family: OpenSansLight;
+		font-size: 1.5rem;
+		letter-spacing: 0;
+		line-height: 2.25rem;
+		padding: 0.5rem 0;
+	}	
+}
+
+header
+{
+	&[role=logo]
+	{
+		h1
+		{
+			font-size: 1.2em;
+			padding: 12px;
+			float: left;
+			color: $color-white;
+			text-decoration: none;
+		}		
+	}	
+
+	&[role=banner]
+	{
+		background-color: $color-primary;
+		box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+		color: $color-white;
+		left: 0;
+		padding: 4px 4px 0px 4px;
+		position: fixed;
+		right: 0;
+		top: 0;
+		z-index: 1000;
+
+		.btn--clear 
+		{
+			color: $color-white;
+			float: left;
+			padding: 6px 0 0 0;
+			min-width: 54px;
+
+			img 
+			{
+				width: 34px;
+			}
+		}
+	}
+}
+
+stm-nav
+{
+	/deep/
+	{
+		ul.menu-bar
+		{
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			position: absolute;
+			top: 120px;				
+
+			>li
+			{
+				color: $color-white;
+				display: block;
+				font-family: $font-family-header;
+				font-size: 2em;
+				font-weight: bold;
+				padding: 18px 13px 16px 26px;
+				position: relative;
+				text-decoration: none;
+
+				&:hover, &:active, &:focus 
+				{
+					background: darken($color-white, 5%);
+					color: $color-grey-dark;
+					cursor: pointer;
+
+					a
+					{
+						color: $color-grey-dark;
+					}
+				}
+
+				a
+				{
+					color: $color-white;
+				}				
+			}
+		}
+	}
+}
+
+main
+{	
+	background-color: $color-background;
+	padding-top: 3.25rem;
+	min-height: $height-mobile-page;
+
+	@include bp-medium-max()
+	{
+		display: flex;
+		flex-direction: column;
+	}
+}

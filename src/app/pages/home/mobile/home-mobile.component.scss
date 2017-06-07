@@ -1,0 +1,43 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/breakpoints';
+
+
+.page-container
+{
+	header
+	{
+		&[role=page]
+		{
+			cdf-video-background
+			{
+				height: 40vh;
+
+				// media queries using breakpoints defined in breakpoints.scss
+				@include bp-medium()
+				{
+					height: 35rem;
+				}				
+			}			
+
+			.header-container
+			{
+				width: 100%;
+
+				.row
+				{
+					height: 100%;
+				}						
+			}
+
+			.shadow
+			{
+				background-color: rgba(0,0,0,0.4);
+				height: 100%;
+				position: absolute;
+				top: 0;					
+				width: 100%;			
+			}
+		}
+	}
+}
+

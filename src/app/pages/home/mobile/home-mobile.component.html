@@ -1,0 +1,32 @@
+<stm-mobile-header title="Welcome">
+
+	<section class="page-container" *ngIf="(PageData)">
+
+		<!--PAGE HEADER-->
+		<header role="page">
+			<!--MEDIA-->
+			<cdf-video-background [mediaModel]="PageData.BackgroundImageModel"></cdf-video-background>
+
+			<div class="shadow">
+				<div class="header-container">
+
+					<div class="row align-center align-middle">
+						<div class="column medium-8">
+							<h1 class="logo">Screwtop Media</h1>
+							<h2>{{PageData.Description}}</h2>							
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</header>
+
+
+		<!--FEATURE ITEMS-->
+		<stm-media-slider [mediaModelList]="PageData.FeatureList" 
+							[showType]="true"
+							[showTitle]="true"
+							(onMediaClick)="onMediaClick($event)"></stm-media-slider>
+	</section>
+
+</stm-mobile-header>

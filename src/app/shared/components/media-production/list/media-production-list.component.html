@@ -1,0 +1,16 @@
+<section class="media-production-list-container text-center" *ngIf="(PageModel)">
+	<section class="row align-center">
+		<div class="column">
+			<h2 class="page-title">Media Productions</h2>
+		</div>
+	</section>
+	<section class="row align-center">
+		<div class="column">
+			<h3>{{PageModel.Message}}</h3>
+		</div>
+	</section>
+
+	<section class="grid-block" *ngFor="let item of PageModel.MediaProductionList">
+		<stm-media-production [mediaProduction]="item"></stm-media-production>
+	</section>
+</section>

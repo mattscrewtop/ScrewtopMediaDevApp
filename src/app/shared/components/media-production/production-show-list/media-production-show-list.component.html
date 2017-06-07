@@ -1,0 +1,5 @@
+<div class="row align-center collapse" *ngIf="(ShowList)">
+	<div class="column small-3" *ngFor="let show of ShowList">
+		<cdf-media [mediaModel]="show.ProductionShowModel"></cdf-media>
+	</div>
+</div>

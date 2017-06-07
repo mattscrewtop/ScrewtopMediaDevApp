@@ -1,0 +1,29 @@
+@import '../../../../../styles/variables';
+@import '../../../../../styles/breakpoints';
+
+
+.media-production-container
+{
+	&__image
+	{
+		height: 135px;
+		margin: auto;	
+		margin-top: 2rem;
+		margin-bottom: 2rem;			
+		text-align: center;
+		width: 415px;
+	}	
+
+	&__description
+	{
+		margin: 2rem 0;
+		text-align: left;
+	}
+}
+
+cdf-media
+{
+	height: 150px;
+	margin: 3rem auto;
+	width: 500px;
+}
