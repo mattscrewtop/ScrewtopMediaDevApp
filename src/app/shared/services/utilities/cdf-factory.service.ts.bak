@@ -151,7 +151,7 @@ export class CdfFactoryService
 			}
 		}
 
-		return new CdfMediaModel(id, type, title, description, imageUri, youTubeId);
+		return new CdfMediaModel(id, type, title, description, imageUri, youTubeId, videoList);
 	};
 
 
