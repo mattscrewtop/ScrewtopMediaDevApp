@@ -20,6 +20,7 @@ import
 
 	//APPLICATION MODULES...
 	AddressModule,
+	AboutModule,
 	MediaProductionModule,
 	MediaSliderModule,
 	NavigationModule,
@@ -42,11 +43,12 @@ import { ToastModule } 					from 'ng2-toastr/ng2-toastr';
 		//MODULES
 		CommonModule,
 		FormsModule,
-		ReactiveFormsModule,		
+		ReactiveFormsModule,
 		RouterModule,
 
 		//APPLICATION MODULES
 		AddressModule,
+		AboutModule,
 		MediaProductionModule,
 		MediaSliderModule,
 		NavigationModule,
@@ -72,7 +74,7 @@ import { ToastModule } 					from 'ng2-toastr/ng2-toastr';
 		IsInViewDirective
 	],
 	exports:
-	[		
+	[
 		//COMPONENTS
 		BaseComponent,
 
@@ -84,11 +86,12 @@ import { ToastModule } 					from 'ng2-toastr/ng2-toastr';
 		CommonModule,
 		FormsModule,
 		HttpModule,
-		ReactiveFormsModule,		
+		ReactiveFormsModule,
 		RouterModule,
 
 		//APPLICATION MODULES
 		AddressModule,
+		AboutModule,
 		MediaProductionModule,
 		MediaSliderModule,
 		NavigationModule,

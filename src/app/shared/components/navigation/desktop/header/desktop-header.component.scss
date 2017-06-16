@@ -17,7 +17,7 @@
 		// 	z-index: 100;
 
 		// 	stm-social-media-list
-		// 	{				
+		// 	{
 		// 		/deep/ stm-social-media-item
 		// 		{
 		// 			display: inline-block;
@@ -29,7 +29,7 @@
 		// 				color: $color-white;
 		// 			}
 		// 		}
-		// 	}			
+		// 	}
 		// }
 
 		&[role=banner]
@@ -46,7 +46,7 @@
 		ul.menu-bar
 		{
 			align-items: stretch;
-			background-color: $color-black;					
+			background-color: $color-black;
 			display: flex;
 			flex-flow: row nowrap;
 			justify-content: center;
@@ -57,8 +57,8 @@
 
 			> li
 			{
-				align-items: stretch;	
-				cursor:pointer;		
+				align-items: stretch;
+				cursor:pointer;
 				display: flex;
 				flex: 0 0 auto;
 
@@ -85,24 +85,24 @@
 
 				> a
 				{
-					color: $color-white;				
+					color: $color-white;
 					display: flex;
 					font-family: $font-family-subheader;
 					font-size: 1.125rem;
 					height: 100%;
 					line-height: 67px;
 					padding: 0rem 1.125rem;
-					text-decoration: initial;	
+					text-decoration: initial;
 
 					&:hover
 					{
 						background-color: $color-grey-dark !important;
-					}										
+					}
 				}
 			}
 
 			h1
-			{				
+			{
 				&.logo
 				{
 					background-image: url(/assets/images/logo-Small.png);
@@ -114,16 +114,32 @@
 					height: 46px;
 					position: relative;
 					text-shadow: none;
-					width: 222px;	
+					width: 222px;
 					z-index: 2;
 				}
-			}		
-		}	
+			}
+
+			stm-social-media-list {
+				align-items: center;
+				display: flex;
+    			margin-left: 1rem;
+
+				/deep/ stm-social-media-item
+				{
+					padding: 0rem .125rem;
+
+					i {
+						font-size: 25px;
+    					color: white;
+					}
+				}
+			}
+		}
 	}
 
 	main
-	{	
+	{
 		background-color: $color-background;
 		min-height: 70vh;
-	}		
+	}
 }

@@ -20,7 +20,7 @@
 				position: absolute;
 				right: 0;
 				top: 0;
-				z-index: -1;				
+				z-index: -1;
 			}
 
 			.callout
@@ -38,6 +38,12 @@
 					margin: auto;
 					width: 270px;
 				}
+			}
+
+			.emailto {
+				color: $color-grey;
+    			display: inline-block;
+				margin-top: 1rem;
 			}
 
 			stm-nav
@@ -98,7 +104,14 @@
 					{
 						color:$color-grey;
 						font-size: 1.25rem;
-					}			
+
+						.adr {
+							a {
+								color: $color-grey;
+								text-decoration: none;
+							}
+						}
+					}
 				}
 			}
 
@@ -118,8 +131,8 @@
 						display: none;
 					}
 				}
-			}			
-			
+			}
+
 
 			stm-social-media-list
 			{
@@ -127,21 +140,21 @@
 				{
 					display: inline-block;
 					font-size: 3rem;
-					padding: 0 1rem;					
+					padding: 0 1rem;
 
 					a
 					{
 						color: $color-grey;
 					}
 				}
-			}			
+			}
 
 			cdf-media
 			{
 				height: 100%;
 				width: 100%;
 			}
-		}	
+		}
 
 		&[role=bottomFooter]
 		{

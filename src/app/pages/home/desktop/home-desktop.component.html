@@ -25,12 +25,6 @@
         <!--MAIN CONTENT ON HOME PAGE-->
         <div class="main-container">
 
-            <!--SOCIAL MEDIA LIST-->
-            <section class="text-center">
-                <stm-social-media-list></stm-social-media-list>
-            </section>
-
-
             <!-- LEARN MORE -->
             <div id="learnMoreContainer" class="learnMoreContainer text-center">
                 <section class="align-center">
@@ -47,22 +41,25 @@
             </div>
 
 
-            <!-- PROJECTS -->
+            <!-- PORTFOLIO -->
             <div id="projectContainer" class="projectContainer" isInView (notify)='onNotifyProjectInView($event)'>
                 <stm-projects-list-slide (NotifyProjectCount)="onNotifyProjectCount($event)"></stm-projects-list-slide>
             </div>
 
+			 <!-- ABOUT US INTRODUCTION -->
+            <div id="aboutContainer" class="aboutContainer" isInView (notify)='onNotifyAboutInView($event)'>
+                <stm-about-detail></stm-about-detail>
+            </div>
 
             <!-- 6-STEP PROCESS -->
-            <div id="processContainer" class="processContainer" isInView (notify)='onNotifyProcessInView($event)'>
+            <!--<div id="processContainer" class="processContainer" isInView (notify)='onNotifyProcessInView($event)'>
                 <stm-process-list></stm-process-list>
-            </div>
-
+            </div>-->
 
             <!-- PRODUCTIONS -->
-            <div id="productionContainer" class="productionContainer" isInView (notify)='onNotifyProductionInView($event)'>
+            <!--<div id="productionContainer" class="productionContainer" isInView (notify)='onNotifyProductionInView($event)'>
                 <stm-media-production-list></stm-media-production-list>
-            </div>
+            </div>-->
         </div>
 
     </section>

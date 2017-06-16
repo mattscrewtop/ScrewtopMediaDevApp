@@ -7,7 +7,45 @@
     background-color: $color-background-footer;
     border-top: solid 1px $color-tertiary;
     display: block;
-    height: 50px;	
+    height: 50px;
     margin-top: 4rem;
     opacity: 0.95;
+}
+
+.footer {
+	&__container {
+		display: flex;
+		flex-wrap: wrap;
+		padding: 2rem;
+	}
+
+	&__item {
+		background-color: white;
+		border: 1px dashed;
+		margin: 1rem .5rem;
+    	padding: 1rem;
+		width: 240px;
+	}
+
+	stm-social-media-list
+	{
+		/deep/ stm-social-media-item
+		{
+			display: inline-block;
+			font-size: 3rem;
+			padding: 0 1rem;
+
+			a
+			{
+				color: $color-grey;
+			}
+		}
+	}
+}
+
+.footer-aditional {
+	background-color: $color-primary;
+	display: flex;
+	color: white;
+	padding: 1rem;
 }

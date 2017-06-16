@@ -1,4 +1,4 @@
-import 
+import
 {
 	AfterContentInit,
 	AfterViewInit,
@@ -22,7 +22,7 @@ let ScrollMagic = require("ScrollMagic");
 	providers: []
 })
 export class HomeDesktopComponent implements AfterContentInit, AfterViewInit, OnInit
-{		
+{
 	// Init ScrollMagic
 	scrollMagicController = new ScrollMagic.Controller();
 
@@ -30,6 +30,7 @@ export class HomeDesktopComponent implements AfterContentInit, AfterViewInit, On
 	ProjectCount:number;
 	isHomeInView: boolean;
 	isServicesInView: boolean;
+	isAboutInView: boolean;
 	isProjectsInView: boolean;
 	isProcessInView: boolean;
 	isProductionsInView: boolean;
@@ -39,15 +40,16 @@ export class HomeDesktopComponent implements AfterContentInit, AfterViewInit, On
 		private homeService: HomeService,
 		private location: Location,
 		private eventService: EventService
-	) 
+	)
 	{
 
 	};
 
-	ngOnInit() 
+	ngOnInit()
 	{
 		this.isHomeInView = true;
 		this.isServicesInView = false;
+		this.isAboutInView = false;
 		this.isProjectsInView = false;
 		this.isProcessInView = false;
 		this.isProductionsInView = false;
@@ -59,25 +61,25 @@ export class HomeDesktopComponent implements AfterContentInit, AfterViewInit, On
 				{
 					this.zone.run(() =>
 					{ 	// Change the property within the zone, CD will run after
-						
+
 						this.PageData = data;
-						
+
 						//console.log('########### HOME PAGE DESKTOP DATA', this.PageData);
-					});	
-					
+					});
+
 				},
-					
+
 				//ON ERROR
 				() => null,
 
 				//ON COMPLETE
-				() => null	
-			);		
+				() => null
+			);
 	};
 
-	ngAfterContentInit() 
+	ngAfterContentInit()
 	{
-		//console.log('**************** AfterContentInit');	
+		//console.log('**************** AfterContentInit');
 	};
 
 	ngAfterViewInit()
@@ -85,7 +87,7 @@ export class HomeDesktopComponent implements AfterContentInit, AfterViewInit, On
 		//console.log('**************** AfterViewInit');
 	};
 
-	onNotifyHomeInView(isInView: boolean)
+	onNotifyAboutInView(isInView: boolean)
 	{
 		//console.log('is services in view:', isInView);
 		this.isHomeInView = isInView;
@@ -99,6 +101,22 @@ export class HomeDesktopComponent implements AfterContentInit, AfterViewInit, On
 		}
 	};
 
+	onNotifyHomeInView(isInView: boolean)
+	{
+		//console.log('is services in view:', isInView);
+		this.isHomeInView = isInView;
+
+		if (isInView)
+		{
+			this.isHomeInView = false;
+			this.isServicesInView = false;
+			this.isAboutInView = false;
+			this.isProjectsInView = false;
+			this.isProcessInView = false;
+			this.isProductionsInView = false;
+		}
+	};
+
 	onNotifyServiceInView(isInView: boolean)
 	{
 		//console.log('is services in view:', isInView);
@@ -106,6 +124,7 @@ export class HomeDesktopComponent implements AfterContentInit, AfterViewInit, On
 
 		if (isInView)
 		{
+			this.isAboutInView = false;
 			this.isHomeInView = false;
 			this.isProjectsInView = false;
 			this.isProcessInView = false;
@@ -120,6 +139,7 @@ export class HomeDesktopComponent implements AfterContentInit, AfterViewInit, On
 
 		if (isInView)
 		{
+			this.isAboutInView = false;
 			this.isHomeInView = false;
 			this.isServicesInView = false;
 			this.isProcessInView = false;
@@ -134,6 +154,7 @@ export class HomeDesktopComponent implements AfterContentInit, AfterViewInit, On
 
 		if (isInView)
 		{
+			this.isAboutInView = false;
 			this.isHomeInView = false;
 			this.isServicesInView = false;
 			this.isProjectsInView = false;
@@ -148,6 +169,7 @@ export class HomeDesktopComponent implements AfterContentInit, AfterViewInit, On
 
 		if (isInView)
 		{
+			this.isAboutInView = false;
 			this.isHomeInView = false;
 			this.isServicesInView = false;
 			this.isProjectsInView = false;
@@ -161,16 +183,16 @@ export class HomeDesktopComponent implements AfterContentInit, AfterViewInit, On
 
 		this.ProjectCount = projectCount;
 
-		//CREATE SCENES AFTER ARBITRARY AMOUNT OF TIME TO MAKE SURE CONTENT EXISTS IN DOM		
-		setTimeout(() => 
+		//CREATE SCENES AFTER ARBITRARY AMOUNT OF TIME TO MAKE SURE CONTENT EXISTS IN DOM
+		setTimeout(() =>
 		{
 			this.applyScrollMagic();
-		}, 250);		
+		}, 250);
 	}
-	
+
 
 	private applyScrollMagic()
-	{ 
+	{
 		//console.log('*************** APPLPYING SCROLL MAGIC...');
 
 		// pin the intro
@@ -184,9 +206,9 @@ export class HomeDesktopComponent implements AfterContentInit, AfterViewInit, On
 			.addTo(this.scrollMagicController);
 
 
-		
-		
-		//LEARN MORE SCENE	
+
+
+		//LEARN MORE SCENE
 		var ourScene = new ScrollMagic.Scene
 			({
 				triggerElement: '#serviceContainer',
@@ -238,7 +260,7 @@ export class HomeDesktopComponent implements AfterContentInit, AfterViewInit, On
 				duration = '100%';
 			}
 
-			//LAST ITEM IN ARRAY				
+			//LAST ITEM IN ARRAY
 			if (i === this.ProjectCount-1)
 			{
 				duration = '90%';
@@ -258,16 +280,16 @@ export class HomeDesktopComponent implements AfterContentInit, AfterViewInit, On
 				// 	colorTrigger: 'black',
 				// 	colorStart: '#75C695',
 				// 	colorEnd: 'orange'
-				// }) // this requires a plugin					
+				// }) // this requires a plugin
 				.addTo(this.scrollMagicController);
-		}	
+		}
 
 
 		//BROADCAST TO LISTENER THAT ROUTE (via path) HAS LOADED.
-		//THIS IS USED FOR SCROLLING TO A SPECIFIC NODE ELEMENT IN DOM (#serviceContainer, #projectContainer, #processContainer, #productionContainer) 			
+		//THIS IS USED FOR SCROLLING TO A SPECIFIC NODE ELEMENT IN DOM (#serviceContainer, #projectContainer, #processContainer, #productionContainer)
 		let locationPath = this.location.path(true);
 
 		//console.log('locationPath:', locationPath);
 		this.eventService.EventJustHappened(locationPath);
-	};	
+	};
 }

@@ -8,14 +8,14 @@
 	{
 		color: $color-black;
 		font-size: 1.25rem;
-		text-align: left;		
+		text-align: left;
 		text-transform: uppercase;
 
 		&+section
 		{
 			margin: 0.5rem 1rem;
-		}	
-	}	
+		}
+	}
 }
 
 .vcard
@@ -32,6 +32,11 @@
 		>div
 		{
 			margin: 0 0 0.25rem 0;
+		}
+
+		a {
+			color: $color-primary;
+			text-decoration: none;
 		}
 	}
 }

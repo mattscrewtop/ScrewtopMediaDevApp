@@ -12,7 +12,7 @@ import { ProjectsPageModel } 	from '../models/projects-page.model';
 import { CdfFactoryService } 	from '../../../services/index';
 
 @Injectable()
-export class ProjectsService 
+export class ProjectsService
 {
 	private ProjectsPageModel: ProjectsPageModel;
 
@@ -22,24 +22,24 @@ export class ProjectsService
 	{
 	}
 
-	GetProjectsList() : Observable<any> 
-	{ 
+	GetProjectsList() : Observable<any>
+	{
 		//RETURN PAGE DATA IF IT'S KNOWN
 		if (this.ProjectsPageModel)
 		{
-			return Observable.create(observer => 
+			return Observable.create(observer =>
 			{
 				observer.next(this.ProjectsPageModel);
 				observer.complete();
 			});
 		}
 		else
-		{ 
+		{
 			let url: string = CdfFactoryService.GetCloudCMSProjectsPageUrl();
 			let requestModel: CdfRequestModel = new CdfRequestModel(environment.CDF_API.ApplicationKey);
 			requestModel.AddGetRequest(url);
 
-			return Observable.create(observer => 
+			return Observable.create(observer =>
 			{
 				this.cdfDataService.requestData(requestModel)
 					.subscribe
@@ -50,31 +50,31 @@ export class ProjectsService
 							//console.log('**********PROJECTS RAW JSON RECEIVED:', rawJson);
 
 							this.ProjectsPageModel = new ProjectsPageModel(rawJson);
-							
+
 							observer.next(this.ProjectsPageModel);
 							observer.complete();
 						},
 
 						//ERROR
-						err => 					
+						err =>
 						{
-							console.log('********** SERVICES DATA ERROR:', err.message);	
+							console.log('********** SERVICES DATA ERROR:', err.message);
 						},
 
 						//ON COMPLETE
 						() => null
-					)	
+					)
 			});
 		}
 	};
 
-	GetProjectDetail(projectNodeId: string) : Observable<any> 
-	{ 
+	GetProjectDetail(projectNodeId: string) : Observable<any>
+	{
 		let url: string = CdfFactoryService.BuildCloudCmsUrlForNodeId(projectNodeId);
 		let requestModel: CdfRequestModel = new CdfRequestModel(environment.CDF_API.ApplicationKey);
 		requestModel.AddGetRequest(url);
-				
-		return Observable.create(observer => 
+
+		return Observable.create(observer =>
 		{
 			this.cdfDataService.requestData(requestModel)
 				.subscribe
@@ -89,14 +89,14 @@ export class ProjectsService
 					},
 
 					//ERROR
-					err => 					
+					err =>
 					{
-						console.log('********** PROJECT DATA ERROR:', err.message);	
+						console.log('********** PROJECT DATA ERROR:', err.message);
 					},
 
 					//ON COMPLETE
 					() => null
-				)	
+				)
 		});
-	};		
+	};
 }

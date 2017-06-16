@@ -1,7 +1,7 @@
 <section class="projects-list-container text-center" *ngIf="(PageData)">
 	<section class="row align-center">
 		<div class="column">
-			<h2 class="page-title">Projects</h2>
+			<h2 class="page-title">Portfolio</h2>
 		</div>
 	</section>
 	<section class="row align-center">
@@ -10,8 +10,8 @@
 		</div>
 	</section>
 
-	<stm-media-slider [mediaModelList]="PageData.ProjectsList" 
+	<stm-media-slider [mediaModelList]="PageData.ProjectsList"
 						(onMediaClick)="doFeatureClick($event)"
-						[showTitle]="true" 
+						[showTitle]="true"
 						[showType]="false"></stm-media-slider>
 </section>

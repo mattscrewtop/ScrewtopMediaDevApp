@@ -2,12 +2,11 @@ import { CdfMediaModel } 			from '@cdf/cdf-ng-media/lib';
 
 import { CdfFactoryService } 		from '../../../services/index';
 
-export class ProjectsDetailModel
+export class AboutDetailModel
 {
     Title: string;
     Description: string;
-	Body: string;
-	MediaModel: CdfMediaModel;
+	OurHistory: string;
 
 	constructor(rawJson: any)
 	{
@@ -25,16 +24,10 @@ export class ProjectsDetailModel
 				this.Description = rawJson.description;
 			}
 
-			//Body
-			if (rawJson.body)
+			//OurHistory
+			if (rawJson.ourHistory)
 			{
-				this.Body = rawJson.body;
-			}
-
-			//MediaModel
-			if (rawJson.image)
-			{
-				this.MediaModel = CdfFactoryService.CreateCdfMediaModelFromJson(rawJson);
+				this.OurHistory = rawJson.ourHistory;
 			}
 		}
 	}

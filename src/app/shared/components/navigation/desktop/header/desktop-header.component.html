@@ -8,20 +8,21 @@
 				</a>
 			</li>
 			<li [routerLinkActive]="'active'">
+				<a routerLink="/home" (click)="onNavItemCicked()">Home</a>
+			</li>
+			<li [routerLinkActive]="'active'">
 				<a routerLink="/services" (click)="onNavItemCicked()">Services</a>
 			</li>
 			<li [routerLinkActive]="'active'">
 				<a routerLink="/projects" (click)="onNavItemCicked()">Portfolio</a>
 			</li>
 			<li [routerLinkActive]="'active'">
-				<a routerLink="/contact-us" (click)="onNavItemCicked()">Contact Us</a>
-			</li>
-			<li [routerLinkActive]="'active'">
-				<a routerLink="/productions" (click)="onNavItemCicked()">Social Media</a>
-			</li>
-			<li [routerLinkActive]="'active'">
 				<a routerLink="/about-us" (click)="onNavItemCicked()">About Us</a>
 			</li>
+			<li [routerLinkActive]="'active'">
+				<a routerLink="/contact-us" (click)="onNavItemCicked()">Contact Us</a>
+			</li>
+			<stm-social-media-list></stm-social-media-list>
 		</ul>
 
 		<!--BREADCRUMBS-->

@@ -1,14 +1,16 @@
 <address class="vcard">
 	<div class="adr">
-		<div class="street-address">{{addressModel.AddressLine1}}</div>
-		<div class="street-address" *ngIf="(addressModel.AddressLine2)">{{addressModel.AddressLine2}}</div>
-		
-		<div>
-			<span class="locality">{{addressModel.City}},</span>&nbsp; 
-			<abbr class="region">{{addressModel.State}}</abbr>&nbsp;&nbsp;
-			<span class="postal-code">{{addressModel.ZipCode}}</span>
-		</div>
+		<a href="https://www.google.com.co/maps/place/2340+E+Trinity+Mills+Rd,+Carrollton,+TX+75006,+EE.+UU./@32.9850853,-96.8736847,15z/data=!4m5!3m4!1s0x864c242bec3a9f83:0xc7ad272996e13b89!8m2!3d32.9845801!4d-96.8736591!6m1!1e1" target="_blank">
+			<div class="street-address">{{addressModel.AddressLine1}}</div>
+			<div class="street-address" *ngIf="(addressModel.AddressLine2)">{{addressModel.AddressLine2}}</div>
 
-		<div class="country-name">{{addressModel.Country}}</div>
+			<div>
+				<span class="locality">{{addressModel.City}},</span>&nbsp;
+				<abbr class="region">{{addressModel.State}}</abbr>&nbsp;&nbsp;
+				<span class="postal-code">{{addressModel.ZipCode}}</span>
+			</div>
+
+			<div class="country-name">{{addressModel.Country}}</div>
+		</a>
 	</div>
 </address>
