@@ -1,7 +1,0 @@
-<section *ngIf="(ServicesPageModel)">
-	<ul class="service-list">
-		<li *ngFor="let entry of ServicesPageModel.ServicesList">
-			<a (click)="onServiceItemCicked(entry)">{{entry.Title}}</a>
-		</li>
-	</ul>						
-</section>
