@@ -1,5 +1,5 @@
 import { environment } 				from '../../environments/environment';
-import { ConfigInterface }			from '@cdf/cdf-ng-media/lib';
+import { ConfigInterface }			from '@titoagudelo/cdf-ng-media/lib';
 
 export const CdfMediaConfig: ConfigInterface =
 	{

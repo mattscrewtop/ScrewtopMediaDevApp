@@ -16,7 +16,7 @@ import { NavComponent } 			from './nav/nav.component';
 import { NavigationService } 		from './services/navigation.service';
 
 //3RD PARTY...
-import { CdfMediaModule } 			from '@cdf/cdf-ng-media/lib';
+import { CdfMediaModule } 			from '@titoagudelo/cdf-ng-media/lib';
 import { CdfModule } 				from '@cdf/cdf-ng/lib';
 
 import

@@ -18,6 +18,7 @@ cdf-media-slider
 				.cdf-media-title
 				{
 					color: $color-white;	
+					display: none;
 					font-family: $font-family-text-slim;
 
 					// media queries using breakpoints defined in breakpoints.scss

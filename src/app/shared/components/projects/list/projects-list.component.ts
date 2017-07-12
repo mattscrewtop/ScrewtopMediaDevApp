@@ -6,7 +6,7 @@ import
 	OnInit,
 	Output
 } 								from '@angular/core';
-import { CdfMediaModel } 		from '@cdf/cdf-ng-media/lib';
+import { CdfMediaModel } 		from '@titoagudelo/cdf-ng-media/lib';
 
 import { NavigationService } 	from '../../../services/index';
 import { ProjectsPageModel } 	from '../models/projects-page.model';

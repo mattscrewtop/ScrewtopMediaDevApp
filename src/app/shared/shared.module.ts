@@ -33,7 +33,7 @@ import
 
 //3RD PARTY...
 import { CdfContactUsFormModule } 		from '@cdf/cdf-ng-contact-us-form/lib';
-import { CdfMediaModule } 				from '@cdf/cdf-ng-media/lib';
+import { CdfMediaModule } 				from '@titoagudelo/cdf-ng-media/lib';
 import { CdfModule } 					from '@cdf/cdf-ng/lib';
 import { ToastModule } 					from 'ng2-toastr/ng2-toastr';
 

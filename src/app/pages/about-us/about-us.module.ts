@@ -1,6 +1,6 @@
 import { NgModule }					from '@angular/core';
 import { CommonModule } 			from '@angular/common';
-import { CdfMediaModule } 			from '@cdf/cdf-ng-media/lib';
+import { CdfMediaModule } 			from '@titoagudelo/cdf-ng-media/lib';
 
 import { AboutUsBaseComponent } 	from './base/about-us-base.component';
 import { AboutUsDesktopComponent }	from './desktop/about-us-desktop.component';

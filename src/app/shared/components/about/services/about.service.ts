@@ -34,7 +34,7 @@ export class AboutService
 		}
 		else
 		{
-			let url: string = CdfFactoryService.GetCloudCMSAboutUsPageUrl();
+			let url: string = CdfFactoryService.GetCloudCMSHomeAboutUsPageUrl();
 			let requestModel: CdfRequestModel = new CdfRequestModel(environment.CDF_API.ApplicationKey);
 			requestModel.AddGetRequest(url);
 

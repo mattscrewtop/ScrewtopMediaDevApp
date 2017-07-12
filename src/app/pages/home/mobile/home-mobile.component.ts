@@ -4,7 +4,7 @@ import
 	NgZone,
 	OnInit
 } 								from '@angular/core';
-import { CdfMediaModel } 		from '@cdf/cdf-ng-media/lib';
+import { CdfMediaModel } 		from '@titoagudelo/cdf-ng-media/lib';
 
 import { HomeMobileModel } 		from '../models/home-mobile.model';
 import { HomeService } 			from '../services/home.service';

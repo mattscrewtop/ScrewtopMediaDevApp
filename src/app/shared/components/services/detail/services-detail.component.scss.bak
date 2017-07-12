@@ -1,0 +1,35 @@
+@import '../../../../../styles/variables';
+@import '../../../../../styles/breakpoints';
+
+
+.service-detail-container
+{
+	cdf-media
+	{
+		height: 60vh;
+		width: 100%; 	
+	}
+
+	&__type
+	{
+		background-color: $color-service;
+		color: $color-white;
+		display: inline-block;
+		padding: 0.25rem 0.5rem;
+		margin: 1.5rem 1rem 1.5rem 0;
+	}
+
+	&__title
+	{
+		font-family: AmericanTypeWriter;
+		font-size: 1.75rem;
+		margin: 0.5rem 0 0.75rem 0;
+	}
+
+	&__intro
+	{
+		font-family: americantypewriter;
+		line-height: 1.35;
+		margin: 0 0 1rem;
+	}
+}

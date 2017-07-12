@@ -37,6 +37,7 @@ export const environment =
 				Footer: '5044a25e984f58dde255',
 				HomeMobilePage: 'b660ecd5aa0bcf5de8dd',
 				HomeDesktopPage: 'e93cf5841ef3b5dcfb44',
+				HomeAboutUsPage: '14f50e66751709d789b1',
 				ServiceListPage: '6d8e5403afb75fe9ad16',
 				ProjectListPage: '3cb20b6e7145a6c003c2',
 				SixStepProcessPage: '72772fb7e18c28d7aa7b',

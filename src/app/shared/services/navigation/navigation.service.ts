@@ -4,7 +4,7 @@ import {
 	NavigationStart,
 	NavigationExtras,
 	NavigationEnd } 					from '@angular/router';
-import { CdfMediaModel } 				from '@cdf/cdf-ng-media/lib';
+import { CdfMediaModel } 				from '@titoagudelo/cdf-ng-media/lib';
 
 @Injectable()
 export class NavigationService 

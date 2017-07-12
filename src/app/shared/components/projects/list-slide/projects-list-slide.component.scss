@@ -28,7 +28,7 @@
 			.project__subtitle
 			{
 				color: $color-white;
-				font-family: QuatroSlabBold;
+				font-family: "OpenSansRegular";
 				font-size: 1.85rem;
 				margin: 0;			
 			}
@@ -63,7 +63,7 @@
 
 			.button.hollow
 			{
-				border-color: $color-white;
+				border: 1px dashed $color-white;
 				color: $color-white;
 			}	
 
@@ -82,7 +82,7 @@
 
 				.button.hollow
 				{
-					border-color: $color-black;
+					border: 1px dashed $color-black;
 					color: $color-black;
 				}	
 
@@ -116,7 +116,7 @@
 
 				.button.hollow
 				{
-					border-color: $color-white;
+					border: 1px dashed $color-white;
 					color: $color-white;
 				}			
 
@@ -140,6 +140,7 @@
 			&:nth-child(4n)
 			{
 				background-color: $color-secondary; 
+				position: relative;
 
 				.page-title,
 				.project__subtitle,
@@ -150,7 +151,7 @@
 
 				.button.hollow
 				{
-					border-color: $color-black;
+					border: 1px dashed $color-black;
 					color: $color-black;
 				}			
 
@@ -185,7 +186,7 @@
 
 				.button.hollow
 				{
-					border-color: $color-black;
+					border: 1px dashed $color-black;
 					color: $color-black;
 				}			
 

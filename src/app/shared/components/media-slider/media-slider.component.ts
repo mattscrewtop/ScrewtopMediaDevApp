@@ -6,7 +6,7 @@ import
 	OnInit,
 	Output
 } 								from '@angular/core';
-import { CdfMediaModel } 		from '@cdf/cdf-ng-media/lib';
+import { CdfMediaModel } 		from '@titoagudelo/cdf-ng-media/lib';
 
 @Component({
 	selector: 'stm-media-slider',

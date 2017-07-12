@@ -1,4 +1,4 @@
-import { CdfMediaModel } 			from '@cdf/cdf-ng-media/lib';
+import { CdfMediaModel } 			from '@titoagudelo/cdf-ng-media/lib';
 
 import { CdfFactoryService } 		from '../../../services/index';
 
@@ -6,7 +6,6 @@ export class AboutDetailModel
 {
     Title: string;
     Description: string;
-	OurHistory: string;
 
 	constructor(rawJson: any)
 	{
@@ -22,12 +21,6 @@ export class AboutDetailModel
 			if (rawJson.description)
 			{
 				this.Description = rawJson.description;
-			}
-
-			//OurHistory
-			if (rawJson.ourHistory)
-			{
-				this.OurHistory = rawJson.ourHistory;
 			}
 		}
 	}

@@ -9,7 +9,7 @@
 						</a>
 					</li>
 					<li *ngFor="let breadcrumb of breadcrumbService.BreadCrumbList">
-						<a (click)="GoToBreadcrumb(breadcrumb)" title="{{breadcrumb.Title}}">{{breadcrumb.Name}}</a>
+						<a (click)="GoToBreadcrumb(breadcrumb)" title="{{breadcrumb.Title}}">{{breadcrumb.Name === "Projects" ? "Portfolio" : breadcrumb.Name}}</a>
 					</li>
 					<li><a>{{breadcrumbService.PageName}}</a></li>
 				</ul>

@@ -1,0 +1,55 @@
+<footer role="topFooter" class="text-center">
+	<section class="row align-center">
+		<div class="column">
+			<div class="callout">
+				<h2 class="section-title">Navigation</h2>
+				<stm-nav></stm-nav>
+			</div>
+		</div>
+		<div class="column">
+
+			<!--ADDRESS LIST-->
+			<div class="callout flex-child-shrink">
+				<h2 class="section-title">Address</h2>
+				<stm-address-list></stm-address-list>
+				<a class="emailto" href="mailto:info@screwtopmedia.com">info@screwtopmedia.com</a>
+			</div>
+
+		</div>
+		<div class="column">
+
+			<section class="row align-middle align-center">
+				<div class="column medium-shrink flex-container flex-dir-column">
+
+					<!--PHONE NUMBER LIST-->
+					<div class="callout flex-child-shrink">
+						<h2 class="section-title">Give Us A Call</h2>
+						<stm-phone-number-list></stm-phone-number-list>
+					</div>
+
+					<!--SOCIAL MEDIA LIST-->
+					<div class="callout flex-child-shrink">
+						<h2 class="section-title">Social Connections</h2>
+						<stm-social-media-list></stm-social-media-list>
+					</div>
+				</div>
+			</section>
+
+		</div>
+	</section>
+
+	<div class="footer__background" *ngIf="(NavFooterMediaModel)">
+		<cdf-media [mediaModel]="NavFooterMediaModel"></cdf-media>
+	</div>
+</footer>
+
+<footer role="bottomFooter" class="text-center">
+	<section class="row align-justify">
+		<div class="column">
+			copyright <i class="fa fa-copyright"></i> 2017. All rights reserved.
+		</div>
+		<div class="column">
+			made with <i class="fa fa-heart"></i> by <a href="http://www.screwtopmedia.com" target="_blank">screwtopmedia.com</a>
+		</div>
+	</section>
+</footer>

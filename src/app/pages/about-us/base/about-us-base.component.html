@@ -55,11 +55,11 @@
 	<div class="employee-container">
 		<section class="employee-row" *ngFor="let employee of PageData.EmployeeList; let i = index">
 			<section class="row align-center">
-				<div class="column large-4">
+				<div class="column small-10 medium-4 large-2">
 					<cdf-media [mediaModel]="employee.MediaModel"></cdf-media>
 				</div>
 
-				<div class="column large-6">
+				<div class="column small-10 medium-6 large-6">
 					<h3 class="mployee-profile-container__employeeName">{{employee.FirstName}} {{employee.LastName}}</h3>
 					<h4 class="mployee-profile-container__employeeTitle">{{employee.Title}}</h4>
 					<div class="mployee-profile-container__description" [innerHTML]="employee.Description"></div>
@@ -73,7 +73,7 @@
 	<section class="row align-center">
 		<div class="column small-10 medium-9 large-8">
 			<h2 class="section-title">News & Events</h2>
-			<h4>Awards</h4>
+			<h4 class="section-subtitle">Awards</h4>
 		</div>
 	</section>
 

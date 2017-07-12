@@ -1,5 +1,5 @@
 import { Injectable } 						from '@angular/core';
-import { CdfMediaModel, CdfVideoModel } 	from '@cdf/cdf-ng-media/lib';
+import { CdfMediaModel, CdfVideoModel } 	from '@titoagudelo/cdf-ng-media/lib';
 
 import { environment } 						from '../../../../environments/environment';
 
@@ -15,6 +15,11 @@ export class CdfFactoryService
 	public static GetCloudCMSHomeMobilePageUrl() : string
 	{
 		return CdfFactoryService.BuildCloudCmsUrlForNodeId(environment.CLOUD_CMS.Content.HomeMobilePage);
+	};
+
+	public static GetCloudCMSHomeAboutUsPageUrl() : string
+	{
+		return CdfFactoryService.BuildCloudCmsUrlForNodeId(environment.CLOUD_CMS.Content.HomeAboutUsPage);
 	};
 
 	//CONSTRUCT URL FOR CLOUD CMS ABOUT US PAGE...
@@ -84,6 +89,7 @@ export class CdfFactoryService
 		let id: string = undefined;
 		let title: string = undefined;
 		let description: string = undefined;
+		let body: string = undefined;
 		let imageUri: string = undefined;
 		let youTubeId: string = undefined;
 		let videoList: CdfVideoModel[] = undefined;
@@ -111,6 +117,12 @@ export class CdfFactoryService
 			if (rawJson.description)
 			{
 				description = rawJson.description;
+			}
+
+			//BODY
+			if (rawJson.body)
+			{
+				body = rawJson.body;
 			}
 
 			//ImageId - VERSION 1
@@ -151,7 +163,7 @@ export class CdfFactoryService
 			}
 		}
 
-		return new CdfMediaModel(id, type, title, description, imageUri, youTubeId);
+		return new CdfMediaModel(id, type, title, description, imageUri, youTubeId, videoList, body);
 	};
 
 

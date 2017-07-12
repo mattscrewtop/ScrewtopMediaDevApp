@@ -7,13 +7,6 @@
 		</div>
 	</section>
 
-	<!--TYPE-->
-	<section class="row">
-		<div class="column">
-			<span class="service-detail-container__type">service</span>
-		</div>
-	</section>
-
 	<!--SERVICE TITLE-->
 	<section class="row">
 		<div class="column">
@@ -32,6 +25,13 @@
 	<section class="row">
 		<div class="column">
 			<span [innerHTML]="PageData.Body"></span>
+		</div>
+	</section>
+
+	<!--SERVICE TITLE-->
+	<section class="row" *ngIf="(PageData.ServicesList.length > 0)">
+		<div class="column">
+			<h2 class="service-detail-container__title">List of services</h2>
 		</div>
 	</section>
 

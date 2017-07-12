@@ -1,4 +1,4 @@
-import { CdfMediaModel } 			from '@cdf/cdf-ng-media/lib';
+import { CdfMediaModel } 			from '@titoagudelo/cdf-ng-media/lib';
 
 import { CdfFactoryService } 		from '../../../shared/index';
 

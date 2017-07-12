@@ -1,0 +1,145 @@
+@import '../../../../../../styles/variables';
+@import '../../../../../../styles/breakpoints';
+
+// media queries using breakpoints defined in breakpoints.scss
+@include bp-large()
+{
+	header
+	{
+		// &[role=toprow]
+		// {
+		// 	background-color: rgba(0, 0, 0, 0.8);
+		// 	position: absolute;
+		// 	height: 1.5rem;
+		// 	top: 0rem;
+		// 	left: 0;
+		// 	right: 0;
+		// 	z-index: 100;
+
+		// 	stm-social-media-list
+		// 	{
+		// 		/deep/ stm-social-media-item
+		// 		{
+		// 			display: inline-block;
+		// 			font-size: 1.125rem;
+		// 			margin: 0 0.5rem;
+
+		// 			a
+		// 			{
+		// 				color: $color-white;
+		// 			}
+		// 		}
+		// 	}
+		// }
+
+		&[role=banner]
+		{
+			background-color: $color-black;
+			box-shadow: 0 4px 2px -2px rgba(0,0,0,0.3);
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			z-index: 100;
+		}
+
+		ul.menu-bar
+		{
+			align-items: stretch;
+			background-color: $color-black;
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: center;
+			margin: 0;
+			overflow-x: hidden;
+			overflow-y: visible;
+			padding: 0;
+
+			> li
+			{
+				align-items: stretch;
+				cursor:pointer;
+				display: flex;
+				flex: 0 0 auto;
+
+				&.active
+				{
+					background-color: $color-secondary;
+				}
+
+				&.logo
+				{
+					margin: 0 2rem 0 0;
+					position: relative;
+
+					>a
+					{
+						padding: 0;
+					}
+				}
+
+				&:hover
+				{
+					background-color: $color-grey-dark !important;
+				}
+
+				> a
+				{
+					color: $color-white;
+					display: flex;
+					font-family: $font-family-subheader;
+					font-size: 1.125rem;
+					height: 100%;
+					line-height: 67px;
+					padding: 0rem 1.125rem;
+					text-decoration: initial;
+
+					&:hover
+					{
+						background-color: $color-grey-dark !important;
+					}
+				}
+			}
+
+			h1
+			{
+				&.logo
+				{
+					background-image: url(/assets/images/logo-Small.png);
+					background-position: center center;
+					background-repeat: no-repeat;
+					color: transparent;
+					display: block;
+					font: 0/0 a;
+					height: 46px;
+					position: relative;
+					text-shadow: none;
+					width: 222px;
+					z-index: 2;
+				}
+			}
+
+			stm-social-media-list {
+				align-items: center;
+				display: flex;
+    			margin-left: 1rem;
+
+				/deep/ stm-social-media-item
+				{
+					padding: 0rem .125rem;
+
+					i {
+						font-size: 25px;
+    					color: white;
+					}
+				}
+			}
+		}
+	}
+
+	main
+	{
+		background-color: $color-background;
+		min-height: 70vh;
+	}
+}

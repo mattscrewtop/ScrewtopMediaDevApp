@@ -4,7 +4,7 @@
 
 cdf-media
 {
-	height: 30rem;
+	height: 15rem;
 	width: 100%;
 }
 
@@ -110,6 +110,10 @@ cdf-media
 	margin: 2rem 0;
 }
 
+.section-subtitle {
+	margin-bottom: 1rem;
+}
+
 
 .employee-container
 {
@@ -125,6 +129,17 @@ cdf-media
 	.employee-row
 	{
 		margin: 0 0 3rem 0;
+	}
+
+	cdf-image
+	{
+		/deep/
+		{
+			.cdf-background-image
+			{
+
+			}
+		}
 	}
 }	
 

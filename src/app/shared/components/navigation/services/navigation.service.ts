@@ -5,7 +5,7 @@ import
 	CdfDataService,	
 	CdfRequestModel
 } 								from '@cdf/cdf-ng/lib';
-import { CdfMediaModel }		from '@cdf/cdf-ng-media/lib';
+import { CdfMediaModel }		from '@titoagudelo/cdf-ng-media/lib';
 
 import { environment } 			from '../../../../../environments/environment';
 import { CdfFactoryService } 	from '../../../services/utilities/cdf-factory.service';

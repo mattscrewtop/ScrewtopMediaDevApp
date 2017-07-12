@@ -10,7 +10,7 @@
 		{
 			border-top: solid 1px $color-border;
 			margin-top: 4rem;
-			padding: 4rem 0 2rem 0;
+			padding: 2rem 0 1rem 0;
 			position: relative;
 
 			.footer__background
@@ -35,6 +35,7 @@
 				{
 					border-color: $color-grey;
 					color: $color-grey;
+					font-size: 1.5rem;
 					margin: auto;
 					width: 270px;
 				}
@@ -58,7 +59,7 @@
 
 						>li
 						{
-							font-size: 1.5rem;
+							font-size: 1.25rem;
 							margin: 0.125rem 0;
 
 							a
@@ -83,7 +84,7 @@
 
 						>li
 						{
-							font-size: 1.5rem;
+							font-size: 1.25rem;
 							margin: 0.125rem 0;
 
 							a
@@ -119,7 +120,7 @@
 			{
 				/deep/
 				{
-					font-size: 1.75rem;
+					font-size: 1.25rem;
 
 					a
 					{
@@ -139,7 +140,7 @@
 				/deep/ stm-social-media-item
 				{
 					display: inline-block;
-					font-size: 3rem;
+					font-size: 2rem;
 					padding: 0 1rem;
 
 					a

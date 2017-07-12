@@ -14,7 +14,7 @@ import { TestModule }      				from './pages/test/test.module';
 
 //3RD PARTY
 import { ToastModule, ToastOptions } 	from 'ng2-toastr/ng2-toastr';
-import { CdfMediaModule }				from '@cdf/cdf-ng-media/lib';
+import { CdfMediaModule }				from '@titoagudelo/cdf-ng-media/lib';
 import
 {
 	CdfMediaConfig,
