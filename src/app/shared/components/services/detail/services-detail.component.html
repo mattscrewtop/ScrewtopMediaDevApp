@@ -28,6 +28,13 @@
 		</div>
 	</section>
 
+	<!--SERVICE TITLE-->
+	<section class="row" *ngIf="(PageData.ServicesList.length > 0)">
+		<div class="column">
+			<h2 class="service-detail-container__title">List of services</h2>
+		</div>
+	</section>
+
 	<!--SERVICE LIST-->
 	<section class="row" *ngFor="let entry of PageData.ServicesList">
 		<div class="column">
