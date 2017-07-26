@@ -33,7 +33,7 @@ export class ControlFactoryDirective implements OnChanges
 	{
 		if (!this.contentTypeModel || this.init) return;
 
-		let factories = Array.from(this.resolver['_factories'].keys());
+		let factories = (Array as any).from(this.resolver['_factories'].keys());;
 		var factoryClass = <Type<any>>factories.find((x: any) => x.name === this.contentTypeModel.ComponentName);
 
 		// console.log('%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  COMPONENT MODEL:', this.contentTypeModel);

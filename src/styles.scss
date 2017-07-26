@@ -32,10 +32,10 @@
 }
 
 //APPLICATION STYLES...
-@import 'styles/variables';
-@import 'styles/components/overrides';
-@import 'styles/components/common';
-@import 'styles/components/fonts';
-@import 'styles/components/headers';
-@import 'styles/components/buttons';
-@import 'styles/components/page';
+@import 'styles/variables.scss';
+@import 'styles/components/overrides.scss';
+@import 'styles/components/common.scss';
+@import 'styles/components/fonts.scss';
+@import 'styles/components/headers.scss';
+@import 'styles/components/buttons.scss';
+@import 'styles/components/page.scss';

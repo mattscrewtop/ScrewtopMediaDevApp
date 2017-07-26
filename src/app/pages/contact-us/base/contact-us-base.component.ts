@@ -37,6 +37,13 @@ export class ContactUsBaseComponent implements OnInit
 		this.toastr.setRootViewContainerRef(vRef);
 	}
 
+	public goToSay(event)
+	{
+		event.stopPropagation();
+		window.scrollTo(0, 1450);
+	}
+
+
 	ngOnInit()
 	{
 		this.contactUsService.GetPageData().subscribe

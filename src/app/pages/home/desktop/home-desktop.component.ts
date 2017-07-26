@@ -231,7 +231,7 @@ export class HomeDesktopComponent implements AfterContentInit, AfterViewInit, On
 			({
 				triggerElement: '#serviceContainer',
 				triggerHook: 0.85,
-				duration: '120%'
+				duration: '150%'
 			})
 			.setClassToggle('#serviceContainer', 'fade-in') // add class to learnMoreContainer
 			// .addIndicators

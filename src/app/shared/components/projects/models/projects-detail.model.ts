@@ -8,6 +8,7 @@ export class ProjectsDetailModel
     Description: string;
 	Body: string;
 	MediaModel: CdfMediaModel;
+	MediaModelHome: CdfMediaModel;
 
 	constructor(rawJson: any)
 	{
@@ -32,8 +33,9 @@ export class ProjectsDetailModel
 			}
 
 			//MediaModel
-			if (rawJson.image)
+			if (rawJson.image && rawJson.imageHome)
 			{
+				rawJson.image = rawJson.imageHome;
 				this.MediaModel = CdfFactoryService.CreateCdfMediaModelFromJson(rawJson);
 			}
 		}

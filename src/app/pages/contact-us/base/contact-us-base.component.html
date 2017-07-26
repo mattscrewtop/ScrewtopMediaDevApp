@@ -17,9 +17,8 @@
 
 					<!--CALL-TO-ACTION-->
 					<div class="flex-child-shrink">
-						<a class="button hollow opaque small radius" routerLink="/contact-us" fragment="say-hello" pageScroll href="#sayHello">Say Hello...</a>
+						<a class="button hollow opaque small radius" (click)="goToSay($event)">Say Hello...</a>
 					</div>
-
 				</div>
 			</div>
 		</div>
@@ -59,13 +58,21 @@
 
 	</section>
 
+	<!--CALL-TO-ACTION-->
+	<div class="flex-child-shrink" id="sayHi">
+	</div>
+
 	<!--CONTACT US FORM-->
 	<section class="page-container__form-container">
 		<section class="row  align-center collapse">
 			<div class="column small-10 medium-10 large-6">
-				<h2 class="section-title" id="sayHello">Contact Us</h2>
+
+				<!--DESCRIPTION-->
+				<h2 class="section-title">Contact Us</h2>
 				<p class="contact-message">{{PageData.FormDescription}}</p>
-				<h2 class="section-title" id="sayHello">Send Us A Message...</h2>
+
+				<!--FORM-->
+				<h2 class="section-title">Send Us A Message...</h2>
 				<cdf-contact-us-form (NotifyFormSubmitted)="onNotifyFormSubmitted($event)"></cdf-contact-us-form>
 			</div>
 		</section>

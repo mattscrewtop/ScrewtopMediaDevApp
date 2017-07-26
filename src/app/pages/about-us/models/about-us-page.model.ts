@@ -14,6 +14,7 @@ export class AboutUsPageModel
 	MediaModel: CdfMediaModel;
 	Recognitions: string;
 	News: string;
+	Events: string;
 	Careers: string;
 
 	constructor(rawJson: any)
@@ -73,6 +74,12 @@ export class AboutUsPageModel
 			if (rawJson.news)
 			{
 				this.News = rawJson.news;
+			}
+
+			//Events
+			if (rawJson.events)
+			{
+				this.Events = rawJson.events;
 			}
 
 			//Careers

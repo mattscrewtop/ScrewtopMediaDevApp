@@ -91,6 +91,7 @@ export class CdfFactoryService
 		let description: string = undefined;
 		let body: string = undefined;
 		let imageUri: string = undefined;
+		let imageHomeUri: string = undefined;
 		let youTubeId: string = undefined;
 		let videoList: CdfVideoModel[] = undefined;
 
@@ -141,6 +142,22 @@ export class CdfFactoryService
 				imageUri = CdfFactoryService.constructCloudCMSMediaUrl(rawJson.id);
 			}
 
+			//ImageHomeId - VERSION 1
+			if (rawJson && rawJson.media && rawJson.media.imageHome && rawJson.media.imageHome.id)
+			{
+				imageHomeUri = CdfFactoryService.constructCloudCMSMediaUrl(rawJson.media.imageHome.id);
+			}
+			//ImageId - VERSION 2
+			else if (rawJson.imageHome && rawJson.imageHome.id)
+			{
+				imageHomeUri = CdfFactoryService.constructCloudCMSMediaUrl(rawJson.imageHome.id);
+			}
+			//ImageId - VERSION 3
+			else if (rawJson && rawJson.id)
+			{
+				imageHomeUri = CdfFactoryService.constructCloudCMSMediaUrl(rawJson.id);
+			}
+
 			//YouTubeId
 			if (rawJson.youTubeId)
 			{
@@ -163,7 +180,7 @@ export class CdfFactoryService
 			}
 		}
 
-		return new CdfMediaModel(id, type, title, description, imageUri, youTubeId, videoList, body);
+		return new CdfMediaModel(id, type, title, description, imageUri, youTubeId, videoList, body, imageHomeUri);
 	};
 
 
