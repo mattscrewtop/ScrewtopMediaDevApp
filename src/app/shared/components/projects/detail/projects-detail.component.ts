@@ -15,7 +15,7 @@ import { BreadcrumbService } 	from '../../../services/index';
 	templateUrl: './projects-detail.component.html',
 	styleUrls: [ './projects-detail.component.scss' ],
 	providers: []
-})	
+})
 export class ProjectsDetailComponent implements OnInit
 {
 	@Input() projectNodeId: string;
@@ -28,7 +28,7 @@ export class ProjectsDetailComponent implements OnInit
 	) { }
 
 	ngOnInit()
-	{ 
+	{
 		this.projectsService.GetProjectDetail(this.projectNodeId).subscribe
 			(
 				//SUCCESS
@@ -36,22 +36,22 @@ export class ProjectsDetailComponent implements OnInit
 				{
 					this.zone.run(() =>
 					{ 	// Change the property within the zone, CD will run after
-						
+
 						this.PageData = data;
 
 						//console.log('*********************** PROJECTS DETAIL MODEL', this.PageData);
-						
-						//BREADCRUMB PAGE			
-						this.breadcrumbService.PageName = this.PageData.Title;						
-					});	
-					
+
+						//BREADCRUMB PAGE
+						this.breadcrumbService.PageName = this.PageData.Title;
+					});
+
 				},
-					
+
 				//ON ERROR
 				() => null,
 
 				//ON COMPLETE
-				() => null	
-			);	
+				() => null
+			);
 	}
 }

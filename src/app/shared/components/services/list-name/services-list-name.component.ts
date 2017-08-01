@@ -15,7 +15,7 @@ import { NavigationService } 	from '../../../services/index';
 	templateUrl: './services-list-name.component.html',
 	styleUrls: [ './services-list-name.component.scss' ],
 	providers: []
-})	
+})
 export class ServicesListNameComponent implements OnInit
 {
 	ServicesPageModel: ServicesPageModel;
@@ -23,11 +23,11 @@ export class ServicesListNameComponent implements OnInit
 	constructor(
 		private zone: NgZone,
 		private servicesService: ServicesService,
-		private navigationService: NavigationService	
+		private navigationService: NavigationService
 	) { }
 
 	ngOnInit()
-	{ 
+	{
 		this.servicesService.GetServicesList().subscribe
 			(
 				//SUCCESS
@@ -35,20 +35,20 @@ export class ServicesListNameComponent implements OnInit
 				{
 					this.zone.run(() =>
 					{ 	// Change the property within the zone, CD will run after
-						
+
 						this.ServicesPageModel = data;
 
 						//console.log('*********************** SERVICES MODEL', this.ServicesPageModel);
-					});	
-					
+					});
+
 				},
-					
+
 				//ON ERROR
 				() => null,
 
 				//ON COMPLETE
-				() => null	
-			);	
+				() => null
+			);
 	}
 
 	private onServiceItemCicked(mediaModel: CdfMediaModel)

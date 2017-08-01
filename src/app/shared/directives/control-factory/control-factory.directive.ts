@@ -1,9 +1,9 @@
-import { 
-	Directive, 
-	Component, 
-	ComponentFactory, 
-	OnChanges, 
-	Input, 
+import {
+	Directive,
+	Component,
+	ComponentFactory,
+	OnChanges,
+	Input,
 	ViewContainerRef,
 	Compiler,
 	ComponentFactoryResolver,
@@ -15,7 +15,7 @@ import {
 @Directive({
   selector: '[ctrl-factory]'
 })
-export class ControlFactoryDirective implements OnChanges 
+export class ControlFactoryDirective implements OnChanges
 {
 	@Input() contentTypeModel: ContentTypeModel
 
@@ -23,13 +23,13 @@ export class ControlFactoryDirective implements OnChanges
 	init = false;
 
 	constructor(
-		private vcRef: ViewContainerRef, 
+		private vcRef: ViewContainerRef,
 		private resolver: ComponentFactoryResolver
-	) 
-	{ 
+	)
+	{
 	}
 
-	ngOnChanges() 
+	ngOnChanges()
 	{
 		if (!this.contentTypeModel || this.init) return;
 
@@ -38,8 +38,8 @@ export class ControlFactoryDirective implements OnChanges
 
 		// console.log('%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  COMPONENT MODEL:', this.contentTypeModel);
 		// console.log('%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  FACTORIES YO:', factories);
-		// console.log('%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  FACTORY CLASS:', factoryClass);		
-		
+		// console.log('%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  FACTORY CLASS:', factoryClass);
+
 		if(factoryClass)
 		{
 			const factory = this.resolver.resolveComponentFactory(factoryClass);
@@ -49,18 +49,18 @@ export class ControlFactoryDirective implements OnChanges
 
 			// if(this.inputs)
 			// {
-			// 	for (let entry of this.inputs) 
+			// 	for (let entry of this.inputs)
 			// 	{
 			// 		if (entry && entry.key && entry.value)
-			// 		{ 
+			// 		{
 			// 			compRef.instance[entry.key] = entry.value;
-			// 		}	
-			// 	}		
+			// 		}
+			// 	}
 			// }
-			
+
 			// console.log('%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  COMPONENT INSTANCE:', compRef.instance);
 
-			if (this.componentRef) 
+			if (this.componentRef)
 			{
 				this.componentRef.destroy();
 			}
@@ -72,7 +72,7 @@ export class ControlFactoryDirective implements OnChanges
 
 	public ngOnDestroy()
 	{
-		if (this.componentRef) 
+		if (this.componentRef)
 		{
 			this.componentRef.destroy();
 			this.componentRef = null;

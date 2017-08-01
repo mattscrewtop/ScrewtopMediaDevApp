@@ -35,17 +35,17 @@ import
 
 			//APPLICATION MODULES
 			AppRoutingModule,
-			CoreModule.forRoot(),		
+			CoreModule.forRoot(),
 			HomeModule,
-			TestModule		
-		],	
+			TestModule
+		],
 		declarations:
 		[
 			AppComponent
 		],
 		providers:
 		[
-			{ provide: ToastOptions, useClass: ToastrCustomOption }		
+			{ provide: ToastOptions, useClass: ToastrCustomOption }
 		],
 		bootstrap:
 		[

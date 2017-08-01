@@ -12,17 +12,17 @@
 @include foundation-media-object;
 @include foundation-visibility-classes;
 
-@each $breakpoint in $breakpoint-classes 
+@each $breakpoint in $breakpoint-classes
 {
-	@if $breakpoint == small 
+	@if $breakpoint == small
 	{
 	// Do nothing
-	} 
-	@else 
+	}
+	@else
 	{
-		@include breakpoint($breakpoint) 
+		@include breakpoint($breakpoint)
 		{
-			.#{$breakpoint}-shrink 
+			.#{$breakpoint}-shrink
 			{
 				flex: 0 0 auto;
 				max-width: 100%;

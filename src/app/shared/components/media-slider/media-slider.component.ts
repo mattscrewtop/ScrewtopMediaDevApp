@@ -14,27 +14,27 @@ import { CdfMediaModel } 		from '@titoagudelo/cdf-ng-media/lib';
 	styleUrls: [ './media-slider.component.scss' ],
 	providers: []
 })
-export class MediaSliderComponent implements OnInit 
+export class MediaSliderComponent implements OnInit
 {
 	@Input() mediaModelList: CdfMediaModel[] = [];
 	@Input() showType: boolean = false;
 	@Input() showTitle: boolean = false;
 	@Input() showDescription: boolean = false;
 	@Output() onMediaClick: EventEmitter<any> = new EventEmitter<any>();
-	
+
 	constructor()
 	{
 	};
 
 	ngOnInit()
 	{
-	};	
+	};
 
 	private doMediaClick(mediaModel: CdfMediaModel)
 	{
 		if (this.onMediaClick)
-		{				
+		{
 			this.onMediaClick.emit(mediaModel);
 		}
-	};	
+	};
 }

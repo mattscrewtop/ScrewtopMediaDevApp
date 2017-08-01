@@ -20,11 +20,11 @@ export class ServicesPageModel
 			//ServicesList
 			if (rawJson.serviceList)
 			{
-				for (let entry of rawJson.serviceList) 
+				for (let entry of rawJson.serviceList)
 				{
-					this.ServicesList.push(CdfFactoryService.CreateCdfMediaModelFromJson(entry));					
-				}					
-			}	
+					this.ServicesList.push(CdfFactoryService.CreateCdfMediaModelFromJson(entry));
+				}
+			}
 		}
 	}
 }

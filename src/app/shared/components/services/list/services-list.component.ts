@@ -15,7 +15,7 @@ import { NavigationService } 	from '../../../services/index';
 	templateUrl: './services-list.component.html',
 	styleUrls: [ './services-list.component.scss' ],
 	providers: []
-})	
+})
 export class ServicesListComponent implements OnInit
 {
 	ServicesPageModel: ServicesPageModel;
@@ -23,11 +23,11 @@ export class ServicesListComponent implements OnInit
 	constructor(
 		private zone: NgZone,
 		private servicesService: ServicesService,
-		private navigationService: NavigationService	
+		private navigationService: NavigationService
 	) { }
 
 	ngOnInit()
-	{ 
+	{
 		this.servicesService.GetServicesList().subscribe
 			(
 				//SUCCESS
@@ -35,20 +35,20 @@ export class ServicesListComponent implements OnInit
 				{
 					this.zone.run(() =>
 					{ 	// Change the property within the zone, CD will run after
-						
+
 						this.ServicesPageModel = data;
 
 						//console.log('*********************** SERVICES MODEL', this.ServicesPageModel);
-					});	
-					
+					});
+
 				},
-					
+
 				//ON ERROR
 				() => null,
 
 				//ON COMPLETE
-				() => null	
-			);	
+				() => null
+			);
 	}
 
 	private doFeatureClick(mediaModel: CdfMediaModel)

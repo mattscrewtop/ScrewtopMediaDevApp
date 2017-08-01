@@ -23,7 +23,7 @@ export const environment =
 			YouTube: 'YouTube',
 			RSS: 'RSS',
 			Snapchat: 'Snapchat'
-		},		
+		},
 		CLOUD_CMS:
 		{
 			ROOT_URL: 'https://api.cloudcms.com',
@@ -43,7 +43,7 @@ export const environment =
 				SixStepProcessPage: '72772fb7e18c28d7aa7b',
 				MediaProductionListPage: 'f2a7a044df6f398a3d7f',
 				SpotlightPage: '6442e7a0538485ba1af8'
-			}			
+			}
 		},
 		CDF_API:
 		{

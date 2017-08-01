@@ -31,7 +31,7 @@ import
 		AddressModule,
 		CommonModule,
 		PhoneNumberModule,
-		RouterModule,		
+		RouterModule,
 		ServicesModule,
 		SocialMediaModule,
 
@@ -42,7 +42,7 @@ import
 	declarations:
 	[
 		//COMPONENTS
-		BreadcrumbsComponent,		
+		BreadcrumbsComponent,
 		DesktopFooterComponent,
 		DesktopHeaderComponent,
 		MobileFooterComponent,
@@ -61,7 +61,7 @@ import
 
 		//DIRECTIVES
 		IsRouterLinkActiveDirective,
-		PageScrollDirective	
+		PageScrollDirective
 	],
 	providers:
 	[

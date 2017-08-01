@@ -16,20 +16,20 @@ import { NavigationService } 		from '../../services/navigation.service';
 	styleUrls: [ './desktop-footer.component.scss' ],
 	providers: []
 })
-export class DesktopFooterComponent implements OnInit 
-{	
+export class DesktopFooterComponent implements OnInit
+{
 	NavFooterMediaModel: CdfMediaModel;
-	SiteNameAndVersion: string;	
-	
+	SiteNameAndVersion: string;
+
     constructor(
 		private zone: NgZone,
 		private navigationService: NavigationService
-	) 
+	)
 	{
     }
 
 	ngOnInit()
-	{	
+	{
 		this.navigationService.GetNavFooterModel().subscribe
 			(
 				//SUCCESS
@@ -37,19 +37,19 @@ export class DesktopFooterComponent implements OnInit
 				{
 					this.zone.run(() =>
 					{ 	// Change the property within the zone, CD will run after
-						
+
 						this.NavFooterMediaModel = data;
 
 						//console.log('***  NAV FOOTER DATA:', this.NavFooterData);
-					});	
-					
+					});
+
 				},
-					
+
 				//ON ERROR
 				() => null,
 
 				//ON COMPLETE
-				() => null	
+				() => null
 			);
 
 		this.SiteNameAndVersion = environment.name + ' - ' + environment.version;
