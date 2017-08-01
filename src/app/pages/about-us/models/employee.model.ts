@@ -5,7 +5,7 @@ import { CdfFactoryService } 		from '../../../shared/index';
 export class EmployeeModel
 {
     Title: string;
-    Description: string;		
+    Description: string;
 	FirstName: string;
 	LastName: string;
 	MediaModel: CdfMediaModel;
@@ -19,13 +19,13 @@ export class EmployeeModel
 			{
 				this.Title = rawJson.title;
 			}
-			
+
 			//DESCRIPTION
 			if (rawJson.description)
 			{
 				this.Description = rawJson.description;
 			}
-			
+
 			//FirstName
 			if (rawJson.firstName)
 			{

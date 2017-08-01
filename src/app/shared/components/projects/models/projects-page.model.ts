@@ -20,11 +20,11 @@ export class ProjectsPageModel
 			//ProjectsList
 			if (rawJson.projectList)
 			{
-				for (let entry of rawJson.projectList) 
+				for (let entry of rawJson.projectList)
 				{
 					this.ProjectsList.push(CdfFactoryService.CreateCdfMediaModelFromJson(entry));
-				}					
-			}	
+				}
+			}
 		}
 	}
 }

@@ -7,13 +7,13 @@ import {
 import { CdfMediaModel } 				from '@titoagudelo/cdf-ng-media/lib';
 
 @Injectable()
-export class NavigationService 
+export class NavigationService
 {
 	private ROUTES =
 	{
 		AboutUs: '/about-us',
 		ContactUs: '/contact-us',
-			
+
 		Home: '/home',
 		HomeServices: '/home#services',
 		HomeProjects: '/home#projects',
@@ -28,13 +28,13 @@ export class NavigationService
 
 		ProjectDetail: '/projects',
 		ProjectList: '/projects/list',
-			
+
 		ServiceDetail: '/services',
 		ServiceList: '/services/list',
-			
+
 		Spotlight: '/spotlight',
 		SpotlightDetail: '/spotlight-detail',
-			
+
 		NoPage404: '/404'
 	};
 
@@ -47,22 +47,22 @@ export class NavigationService
 		this.router.events.subscribe((event) =>
 		{
 			// NavigationStart
-			if (event instanceof NavigationStart) 
+			if (event instanceof NavigationStart)
 			{
 				this.RouteHistory.push(event.url);
-			}	
-			
+			}
+
 			// NavigationEnd
-			if (event instanceof NavigationEnd) 
+			if (event instanceof NavigationEnd)
 			{
 				window.scrollTo(0, 0);
-			}			
-		});	
+			}
+		});
 
 		let defaultNavigationExtras: NavigationExtras =
 		{
 			fragment: ''
-		};	
+		};
 	}
 
 
@@ -71,14 +71,14 @@ export class NavigationService
 		return (this.RouteHistory.length > 0);
 	}
 
-	//HOME PAGE	
+	//HOME PAGE
 	GoToHomePage()
 	{
 		this.router.navigate([ this.ROUTES.Home ], this.defaultNavigationExtras);
 	}
 
-	
-	//SERVICES LIST PAGE	
+
+	//SERVICES LIST PAGE
 	GoToServicesListPage()
 	{
 		this.router.navigate([ this.ROUTES.ServiceList ]);
@@ -89,9 +89,9 @@ export class NavigationService
 		console.log(this.ROUTES);
 		this.router.navigate([ this.ROUTES.ServiceDetail, nodeId ]);
 	}
-	
 
-	//PROJECTS LIST PAGE	
+
+	//PROJECTS LIST PAGE
 	GoToProjectsListPage()
 	{
 		this.router.navigate([ this.ROUTES.ProjectList ]);
@@ -101,9 +101,9 @@ export class NavigationService
 	{
 		this.router.navigate([ this.ROUTES.ProjectDetail, nodeId ]);
 	}
-	
 
-	//MEDIA PRODUCTIONS LIST PAGE	
+
+	//MEDIA PRODUCTIONS LIST PAGE
 	GoToMediaProductionsListPage()
 	{
 		this.router.navigate([ this.ROUTES.MediaProductionList ]);
@@ -119,22 +119,22 @@ export class NavigationService
 		this.router.navigate([ this.ROUTES.MediaProductionShowDetail, nodeId ]);
 	}
 
-	
-	
 
-	//PROCESS LIST PAGE	
+
+
+	//PROCESS LIST PAGE
 	GoToProcessListPage()
 	{
 		this.router.navigate([ this.ROUTES.ProcessList ]);
 	}
 
-	//ABOUT US PAGE	
+	//ABOUT US PAGE
 	GoToAboutUsPage()
 	{
 		this.router.navigate([ this.ROUTES.AboutUs ]);
 	}
 
-	//CONTACT US PAGE	
+	//CONTACT US PAGE
 	GoContactUsPage()
 	{
 		this.router.navigate([ this.ROUTES.ContactUs ]);
@@ -148,42 +148,42 @@ export class NavigationService
 	}
 
 
-	//GENERIC NAVIGATION	
+	//GENERIC NAVIGATION
 	GoToRoute(route: string, parameter?: any)
-	{ 
+	{
 		if (!parameter)
-		{ 
+		{
 			this.router.navigate([ route ]);
-		}	
+		}
 		else
 		{
 			this.router.navigate([ route, parameter ]);
-		}		
+		}
 	}
 
 
-	//USE MEDIA TYPE TO DETERMINE WHAT ROUTE TO LOAD...	
+	//USE MEDIA TYPE TO DETERMINE WHAT ROUTE TO LOAD...
 	GoToMediaDetailPage(mediaModel: CdfMediaModel)
-	{ 
+	{
 		//console.log('********** MEDIA CLICKED:', mediaModel);
-				
+
 		//PROJECT
 		if (mediaModel.Type === 'project')
-		{ 
+		{
 			this.GoToProjectDetailPage(mediaModel.Id);
 		}
 
 		//SERVICE
 		else if (mediaModel.Type === 'service')
-		{ 
+		{
 			this.GoToServiceDetailPage(mediaModel.Id);
 		}
 
 		//MEDIA PRODUCTION
 		else if (mediaModel.Type === 'production')
-		{ 
+		{
 			this.GoToMediaProductionDetailPage(mediaModel.Id);
-		}		
+		}
 
 	}
 }

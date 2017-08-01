@@ -17,7 +17,7 @@ import { ProjectsService } 		from '../services/projects.service';
 	templateUrl: './projects-list-slide.component.html',
 	styleUrls: [ './projects-list-slide.component.scss' ],
 	providers: []
-})	
+})
 export class ProjectsListSlideComponent implements OnInit
 {
 	ProjectsPageModel: ProjectsPageModel;
@@ -27,11 +27,11 @@ export class ProjectsListSlideComponent implements OnInit
 	constructor(
 		private zone: NgZone,
 		private projectsService: ProjectsService,
-		private navigationService: NavigationService		
+		private navigationService: NavigationService
 	) { }
 
 	ngOnInit()
-	{ 
+	{
 		this.projectsService.GetProjectsList().subscribe
 			(
 				//SUCCESS
@@ -39,22 +39,22 @@ export class ProjectsListSlideComponent implements OnInit
 				{
 					this.zone.run(() =>
 					{ 	// Change the property within the zone, CD will run after
-						
+
 						this.ProjectsPageModel = data;
 
-						this.NotifyProjectCount.emit(this.ProjectsPageModel.ProjectsList.length);	
+						this.NotifyProjectCount.emit(this.ProjectsPageModel.ProjectsList.length);
 
 						//console.log('*********************** PROJECTS MODEL', this.ProjectsPageModel);
-					});	
-					
+					});
+
 				},
-					
+
 				//ON ERROR
 				() => null,
 
 				//ON COMPLETE
-				() => null	
-			);	
+				() => null
+			);
 	}
 
 	onLearnMoreClick(mediaModel: CdfMediaModel)

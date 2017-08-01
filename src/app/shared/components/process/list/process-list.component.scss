@@ -8,7 +8,7 @@
 	{
 		text-align: left;
 		padding: 0;
-	}	
+	}
 
 	@include bp-medium()
 	{
@@ -19,7 +19,7 @@
 			margin-top: 0;
 			position: relative;
 			z-index: 2;
-		}		
+		}
 	}
 
 	h3.subtitle
@@ -32,7 +32,7 @@
 		position: relative;
 		text-align: left;
 		white-space: nowrap;
-		z-index: 2;		
+		z-index: 2;
 
 		>span
 		{
@@ -42,7 +42,7 @@
 			height: 54px;
 			padding: 0.35rem;
 			text-align: center;
-			width: 54px;			
+			width: 54px;
 		}
 	}
 }

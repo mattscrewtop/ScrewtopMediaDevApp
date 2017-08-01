@@ -1,29 +1,26 @@
 {
-	"compilerOptions": {
-		"target": "es5",
-		"module": "es2015",
-		"moduleResolution": "node",
-		"sourceMap": true,
-		"emitDecoratorMetadata": true,
-		"experimentalDecorators": true,
-		"removeComments": false,
-		"noImplicitAny": false,
-		"suppressImplicitAnyIndexErrors": true,
-		"outDir": "./lib-temp",
-        "rootDir": ".",
-        "stripInternal": true,
-        "skipLibCheck": true,
-        "types": ["node"]
-	},
-	"files": [
-		"src/app/app.module.ts",
-		"src/main.ts"
-	],
-	"exclude": [
-		"node_modules"
-	],
-	"angularCompilerOptions": {
-		"genDir": "aot",
-		"skipMetadataEmit": false
-	}
+  "compilerOptions": {
+    "target": "es5",
+    "module": "es2015",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": ["es2015", "dom"],
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "typeRoots": [
+      "./node_modules/@types/"
+    ]
+  },
+
+  "files": [
+    "src/app/app.module.ts",
+    "src/main.ts"
+  ],
+
+  "angularCompilerOptions": {
+   "genDir": "aot",
+   "skipMetadataEmit" : true
+ }
 }

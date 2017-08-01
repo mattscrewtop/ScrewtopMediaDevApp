@@ -15,7 +15,7 @@ cdf-media
 		color: $color-white;
 		font-size: 1.5rem;
 		line-height: 1;
-		margin: auto;			
+		margin: auto;
 		text-align: center;
 		width: 85%;
 	}
@@ -35,7 +35,7 @@ cdf-media
 		}
 
 		&__title
-		{				
+		{
 			background-color: $color-secondary;
 			color: $color-white;
 			font-size: 1rem;
@@ -51,8 +51,8 @@ cdf-media
 			height: 3.5rem;
 			line-height: 3.5rem;
 			padding: 0.5rem 0 0 0;
-			text-align: center;		
-			width: 100%;		
+			text-align: center;
+			width: 100%;
 
 			.key
 			{
@@ -69,10 +69,10 @@ cdf-media
 				font-family: QuatroSlabSemiBold;
 				font-size: 1rem;
 				line-height: 1;
-			}			
-		}					
+			}
+		}
 	}
-	
+
 	&__imageWrapper
 	{
 		position: relative;
@@ -92,16 +92,16 @@ cdf-media
 
 		&__image
 		{
-			position: relative;   
-			height: 20vh;		
-			width: 100%;		
+			position: relative;
+			height: 20vh;
+			width: 100%;
 		}
 	}
 
 	.page__title
 	{
 		margin: 2rem 0;
-	}	
+	}
 }
 
 
@@ -137,7 +137,7 @@ cdf-media
 			}
 		}
 	}
-}	
+}
 
 
 
@@ -153,15 +153,15 @@ cdf-media
 				cdf-media
 				{
 					height: 35rem;
-				}				
+				}
 				.header-container
 				{
 					.row
 					{
 						height: 35rem;
-					}				
+					}
 				}
 			}
 		}
-	}	
-}		
+	}
+}

@@ -261,7 +261,7 @@ export class HomeDesktopComponent implements AfterContentInit, AfterViewInit, On
 			}
 
 			//LAST ITEM IN ARRAY
-			if (i === this.ProjectCount-1)
+			if (i === this.ProjectCount - 1)
 			{
 				duration = '90%';
 			}

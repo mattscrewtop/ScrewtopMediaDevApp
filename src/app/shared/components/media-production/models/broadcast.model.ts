@@ -6,11 +6,11 @@ import { KeyValueModel }		from '../../../models/key-value.model';
 export class BroadcastModel
 {
     Title: string;
-    Description: string;	
+    Description: string;
 	MediaOutlet: string;
 	Image: CdfMediaModel;
 	Schedule: KeyValueModel<string, string>[] = [];
-	
+
 	constructor(rawJson: any)
 	{
 		if(rawJson)
@@ -20,19 +20,19 @@ export class BroadcastModel
 			{
 				this.Title = rawJson.title;
 			}
-			
+
 			//DESCRIPTION
 			if (rawJson.description)
 			{
 				this.Description = rawJson.description;
 			}
-			
+
 			//BROADCAST IMAGE
 			if (rawJson.image)
-			{ 
+			{
 				this.Image = CdfFactoryService.CreateCdfMediaModelFromJson(rawJson.image);
 			}
-			
+
 			//MediaOutlet
 			if (rawJson.mediaOutlet)
 			{
@@ -42,7 +42,7 @@ export class BroadcastModel
 			//Schedule
 			if (rawJson.schedule)
 			{
-				for (let entry of rawJson.schedule) 
+				for (let entry of rawJson.schedule)
 				{
 					this.Schedule.push(new KeyValueModel<string, string>(entry.day, entry.hours));
 				}

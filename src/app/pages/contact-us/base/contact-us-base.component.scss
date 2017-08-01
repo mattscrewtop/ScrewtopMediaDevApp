@@ -21,13 +21,13 @@
 				@include bp-medium-mid()
 				{
 					height: 25rem;
-				}		
+				}
 
 				@include bp-large()
 				{
 					height: 35rem;
-				}						
-			}	
+				}
+			}
 
 			.header-container
 			{
@@ -43,13 +43,13 @@
 					@include bp-medium-mid()
 					{
 						height: 25rem;
-					}		
+					}
 
 					@include bp-large()
 					{
 						height: 35rem;
-					}								
-				}				
+					}
+				}
 
 				h2
 				{
@@ -59,33 +59,33 @@
 					@include bp-medium()
 					{
 						font-size: 4rem;
-						padding: 1.5rem 0;									
+						padding: 1.5rem 0;
 					}
 
 					@include bp-medium-mid()
 					{
 						font-size: 4rem;
-						padding: 1.5rem 0;									
-					}					
+						padding: 1.5rem 0;
+					}
 				}
 
 				h3
 				{
 					color: $color-grey;
-					padding: 1rem 1.5rem .5rem;			
+					padding: 1rem 1.5rem .5rem;
 
 					@include bp-medium()
 					{
 						font-size: 2rem;
-						padding: 1rem 0;									
+						padding: 1rem 0;
 					}
 
 					@include bp-medium-mid()
 					{
 						font-size: 2rem;
-						padding: 1rem 0;						
-					}				
-				}			
+						padding: 1rem 0;
+					}
+				}
 
 				.button.hollow
 				{
@@ -113,17 +113,17 @@
 			@include bp-medium()
 			{
 				height: 25rem;
-			}		
+			}
 
 			@include bp-medium-mid()
 			{
 				height: 30rem;
-			}	
+			}
 
 			@include bp-large()
 			{
 				height: 35rem;
-			}											
+			}
 		}
 
 		.row
@@ -131,19 +131,19 @@
 			@include bp-medium()
 			{
 				height: 25rem;
-			}		
+			}
 
 			@include bp-medium-mid()
 			{
 				height: 30rem;
-			}	
+			}
 
 			@include bp-large()
 			{
 				height: 35rem;
-			}			
-		}		
-				
+			}
+		}
+
 		&__content
 		{
 			padding: 2rem;
@@ -154,9 +154,9 @@
 				left: 50%;
 				position: absolute;
 				right: 0;
-				top: 0;				
-			}			
-		}			
+				top: 0;
+			}
+		}
 	}
 
 	&__form-container
@@ -179,9 +179,9 @@
 			h2
 			{
 				margin-bottom: 1rem;
-			}				
-		}		
-	}	
+			}
+		}
+	}
 
 	stm-social-media-list
 	{
@@ -218,7 +218,7 @@
 		{
 			font-size: 1.25rem;
 		}
-	}	
+	}
 
 	.callout
 	{
@@ -232,9 +232,9 @@
 			.vcard
 			{
 				font-size: 1.25rem;
-			}			
+			}
 		}
-	}	
+	}
 
 
 	stm-phone-number-list
@@ -266,10 +266,10 @@
 				a
 				{
 					color: $color-grey-medium;
-				}				
-			}						
+				}
+			}
 		}
-	}	
+	}
 }
 
 
@@ -281,7 +281,7 @@
 		{
 			font-size: 1.5rem;
 		}
-	}	
+	}
 
 	.callout
 	{
@@ -295,9 +295,9 @@
 			.vcard
 			{
 				font-size: 1.5rem;
-			}			
+			}
 		}
-	}	
+	}
 
 
 	stm-phone-number-list
@@ -323,9 +323,9 @@
 			stm-social-media-item
 			{
 				font-size: 3rem;
-			}						
+			}
 		}
-	}					
+	}
 }
 
 
@@ -337,7 +337,7 @@
 		{
 			font-size: 1.75rem;
 		}
-	}	
+	}
 
 	stm-address-list
 	{
@@ -346,9 +346,9 @@
 			.vcard
 			{
 				font-size: 1.75rem;
-			}			
+			}
 		}
-	}	
+	}
 
 
 	stm-phone-number-list
@@ -374,7 +374,7 @@
 			stm-social-media-item
 			{
 				font-size: 4rem;
-			}						
+			}
 		}
-	}	
-}		
+	}
+}

@@ -6,10 +6,10 @@
 {
 	article
 	{
-		&.slide 
+		&.slide
 		{
-			background-color: $color-secondary; 
-			height: 80vh; 
+			background-color: $color-secondary;
+			height: 80vh;
 			overflow: hidden;
 			position: relative;
 
@@ -30,7 +30,7 @@
 				color: $color-white;
 				font-family: "OpenSansRegular";
 				font-size: 1.85rem;
-				margin: 0;			
+				margin: 0;
 			}
 
 			.projectIndicatorContainer
@@ -43,7 +43,7 @@
 					font-size: 1.5rem;
 					margin: 0 0.5rem 0 0;
 				}
-			}	
+			}
 
 			.learnMoreContainer
 			{
@@ -65,26 +65,26 @@
 			{
 				border: 1px dashed $color-white;
 				color: $color-white;
-			}	
+			}
 
 
 			&:nth-child(2n),
 			&:nth-child(5n)
 			{
-				background-color: $color-white; 
+				background-color: $color-white;
 
 				.page-title,
 				.project__subtitle,
 				.project__description
 				{
 					color: $color-black;
-				}		
+				}
 
 				.button.hollow
 				{
 					border: 1px dashed $color-black;
 					color: $color-black;
-				}	
+				}
 
 				.projectIndicatorContainer
 				{
@@ -92,7 +92,7 @@
 					{
 						color: $color-black;
 					}
-				}	
+				}
 
 				.learnMoreContainer
 				{
@@ -100,25 +100,25 @@
 					{
 						color: $color-black;
 					}
-				}														
+				}
 			}
 
 			&:nth-child(3n)
 			{
-				background-color: $color-black; 
+				background-color: $color-black;
 
 				.page-title,
 				.project__subtitle,
 				.project__description
 				{
 					color: $color-white;
-				}		
+				}
 
 				.button.hollow
 				{
 					border: 1px dashed $color-white;
 					color: $color-white;
-				}			
+				}
 
 				.projectIndicatorContainer
 				{
@@ -126,7 +126,7 @@
 					{
 						color: $color-white;
 					}
-				}		
+				}
 
 				.learnMoreContainer
 				{
@@ -134,12 +134,12 @@
 					{
 						color: $color-white;
 					}
-				}										
+				}
 			}
 
 			&:nth-child(4n)
 			{
-				background-color: $color-secondary; 
+				background-color: $color-secondary;
 				position: relative;
 
 				.page-title,
@@ -147,13 +147,13 @@
 				.project__description
 				{
 					color: $color-black;
-				}			
+				}
 
 				.button.hollow
 				{
 					border: 1px dashed $color-black;
 					color: $color-black;
-				}			
+				}
 
 				.projectIndicatorContainer
 				{
@@ -161,7 +161,7 @@
 					{
 						color: $color-black;
 					}
-				}		
+				}
 
 				.learnMoreContainer
 				{
@@ -169,26 +169,26 @@
 					{
 						color: $color-black;
 					}
-				}						
+				}
 			}
 
 
 			&:last-child
 			{
-				background-color: $color-background-hover; 
+				background-color: $color-background-hover;
 
 				.page-title,
 				.project__subtitle,
 				.project__description
 				{
 					color: $color-black;
-				}			
+				}
 
 				.button.hollow
 				{
 					border: 1px dashed $color-black;
 					color: $color-black;
-				}			
+				}
 
 				.projectIndicatorContainer
 				{
@@ -196,7 +196,7 @@
 					{
 						color: $color-black;
 					}
-				}		
+				}
 
 				.learnMoreContainer
 				{
@@ -204,10 +204,10 @@
 					{
 						color: $color-black;
 					}
-				}						
-			}			
+				}
+			}
 
-			.pin-wrapper 
+			.pin-wrapper
 			{
 				width: 100%;
 				height: 100%;
@@ -227,7 +227,7 @@
 		cdf-media
 		{
 			height: 420px;
-			width: 420px;			
-		}	
-	}	
+			width: 420px;
+		}
+	}
 }

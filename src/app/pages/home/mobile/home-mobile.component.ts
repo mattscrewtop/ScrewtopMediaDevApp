@@ -16,7 +16,7 @@ import { NavigationService }	from '../../../shared/services/index';
 	styleUrls: [ './home-mobile.component.scss' ],
 	providers: []
 })
-export class HomeMobileComponent implements OnInit 
+export class HomeMobileComponent implements OnInit
 {
 	PageData: HomeMobileModel;
 
@@ -28,7 +28,7 @@ export class HomeMobileComponent implements OnInit
 	{
 	}
 
-	ngOnInit() 
+	ngOnInit()
 	{
 		this.homeService.GetHomePageMobileData().subscribe
 			(
@@ -37,24 +37,24 @@ export class HomeMobileComponent implements OnInit
 				{
 					this.zone.run(() =>
 					{ 	// Change the property within the zone, CD will run after
-						
+
 						this.PageData = data;
-						
+
 						//console.log('########### HOME PAGE MOBILE DATA', this.PageData);
-					});	
-					
+					});
+
 				},
-					
+
 				//ON ERROR
 				() => null,
 
 				//ON COMPLETE
-				() => null	
-			);		
+				() => null
+			);
 	}
 
 	onMediaClick(mediaModel: CdfMediaModel)
-	{ 			
+	{
 		this.navigationService.GoToMediaDetailPage(mediaModel);
 	}
 }

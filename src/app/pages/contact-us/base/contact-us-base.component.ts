@@ -82,21 +82,21 @@ export class ContactUsBaseComponent implements OnInit
 				{
 					this.zone.run(() =>
 					{ 	// Change the property within the zone, CD will run after
-						
+
 						this.ContactUsFormComponent.ResetForm();
 
 						//console.log('########### CONTACT US FORM DATA SENT....');
 
 						this.toastr.success('Thanks for reaching out to us!', 'Success!');
-					});	
-					
+					});
+
 				},
-					
+
 				//ON ERROR
 				() => null,
 
 				//ON COMPLETE
-				() => null	
-			);		
+				() => null
+			);
 	};
 }
