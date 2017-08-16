@@ -21,9 +21,27 @@
 	&__item {
 		background-color: white;
 		border: 1px dashed;
+		font-size: 1.5rem;
 		margin: 1rem .5rem;
     	padding: 1rem;
 		width: 240px;
+	}
+
+	.section-title
+	{
+		font-size: 1.5rem;
+	}
+
+	.emailto {
+		font-size: 1rem;
+	}
+
+	stm-address-list
+	{
+		/deep/ stm-address-item
+		{
+			font-size: 1rem;
+		}
 	}
 
 	stm-social-media-list
@@ -31,7 +49,7 @@
 		/deep/ stm-social-media-item
 		{
 			display: inline-block;
-			font-size: 3rem;
+			font-size: 2rem;
 			padding: 0 1rem;
 
 			a
