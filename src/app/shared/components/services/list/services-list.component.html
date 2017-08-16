@@ -6,12 +6,12 @@
 	</section>
 	<section class="row align-center">
 		<div class="column large-8">
-			<h3>{{ServicesPageModel.ServiceMessage}}</h3>
+			<h3 class="description-service">{{ServicesPageModel.ServiceMessage}}</h3>
 		</div>
 	</section>
 
-	<stm-media-slider [mediaModelList]="ServicesPageModel.ServicesList" 
+	<stm-media-slider [mediaModelList]="ServicesPageModel.ServicesList"
 						(onMediaClick)="doFeatureClick($event)"
-						[showTitle]="true" 
+						[showTitle]="true"
 						[showType]="false"></stm-media-slider>
 </section>

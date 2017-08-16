@@ -12,6 +12,20 @@
 		}
 	}
 
+	@include bp-small()
+	{
+		h2.page-title
+		{
+			font-size: 2rem;
+		}
+
+		h3.description-portfolio
+		{
+			font-size: 1rem;
+			padding: 0 1rem;
+		}
+	}
+
 	stm-media-slider
 	{
 		display: block;

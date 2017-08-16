@@ -26,3 +26,31 @@
 		max-width: 20rem;
 	}
 }
+
+@media screen and (max-width: 40rem)
+{
+	.sub-service-detail-container
+	{
+		&__body
+		{
+			flex-direction: column;
+		}
+
+		&__img
+		{
+			margin: 0 auto;
+		}
+
+		&__media
+		{
+			margin: 0;
+			display: flex;
+			width: 100%;
+		}
+
+		&__intro
+		{
+			margin: 1rem;
+		}
+	}
+}

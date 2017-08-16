@@ -139,9 +139,6 @@ cdf-media
 	}
 }
 
-
-
-
 @include bp-medium()
 {
 	.page-container
@@ -159,6 +156,26 @@ cdf-media
 					.row
 					{
 						height: 35rem;
+					}
+				}
+			}
+		}
+	}
+}
+
+@include bp-small()
+{
+	.page-container
+	{
+		header
+		{
+			&[role=page]
+			{
+				.header-container
+				{
+					h2
+					{
+						font-size: 2rem;
 					}
 				}
 			}
