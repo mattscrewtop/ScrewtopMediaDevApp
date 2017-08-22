@@ -33,8 +33,9 @@ export class ServicesDetailModel
 			}
 
 			//MediaModel
-			if (rawJson.image)
+			if (rawJson.image && rawJson.imageHome)
 			{
+				rawJson.image = rawJson.imageHome;
 				this.MediaModel = CdfFactoryService.CreateCdfMediaModelFromJson(rawJson);
 			}
 
