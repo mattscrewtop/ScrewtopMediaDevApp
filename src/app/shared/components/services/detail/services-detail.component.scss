@@ -33,3 +33,10 @@
 		margin: 0 0 1rem;
 	}
 }
+
+@include bp-large() {
+	.service-detail-container
+	{
+		padding-top: 48px;
+	}
+}
