@@ -9,6 +9,7 @@ export class AboutUsPageModel
     Title: string;
     Description: string;
 	OurHistory: string;
+	OurProcess: string;
 	QuickFacts: KeyValueModel<string, string>[] = [];
 	EmployeeList: EmployeeModel[] = [];
 	MediaModel: CdfMediaModel;
@@ -38,6 +39,12 @@ export class AboutUsPageModel
 			if (rawJson.ourHistory)
 			{
 				this.OurHistory = rawJson.ourHistory;
+			}
+
+			//OurHistory
+			if (rawJson.ourProcess)
+			{
+				this.OurProcess = rawJson.ourProcess;
 			}
 
 			//QuickFacts
