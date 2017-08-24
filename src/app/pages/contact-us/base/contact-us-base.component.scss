@@ -202,6 +202,63 @@
 			}
 		}
 	}
+
+	.section-info
+	{
+		background-color: #ffffff;
+		padding: 1.25rem;
+
+		.section-info-title
+		{
+			border-bottom: 1px dashed;
+		}
+
+		.flex-content
+		{
+			display: inline-block;
+			width: 49%;
+		}
+
+		.flex-child
+		{
+			align-items: center;
+			display: flex;
+
+			i
+			{
+				font-size: 2rem;
+    			padding: 1rem;
+			}
+		}
+
+		.last-child
+		{
+			margin-top: 1rem;
+		}
+
+		stm-address-list
+		{
+			/deep/
+			{
+				.vcard
+				{
+					font-size: 1rem;
+					margin-left: 3rem;
+					padding: 0;
+				}
+			}
+		}
+
+
+		stm-phone-number-list
+		{
+			/deep/
+			{
+				font-size: 1.25rem;
+				margin-top: 1rem;
+			}
+		}
+	}
 }
 
 @include bp-small()
