@@ -151,6 +151,7 @@ cdf-media
 				{
 					height: 35rem;
 				}
+
 				.header-container
 				{
 					.row
@@ -163,7 +164,7 @@ cdf-media
 	}
 }
 
-@include bp-small()
+@include bp-custom('max-width: 40rem')
 {
 	.page-container
 	{
