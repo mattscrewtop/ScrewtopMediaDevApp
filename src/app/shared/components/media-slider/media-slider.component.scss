@@ -9,6 +9,13 @@ cdf-media-slider
 		.media-slider-flex-item
 		{
 			/* CUSTOMIZE EACH MEDIA ELEMENT HERE... */
+    		height: 275px;
+			width: 275px;
+
+			@include bp-custom('max-width: 840px')
+			{
+				margin: 5px;
+			}
 		}
 
 		cdf-media
