@@ -13,7 +13,7 @@
 					<div class="row align-center align-middle">
 						<div class="column medium-8">
 							<h1 class="logo">Screwtop Media</h1>
-							<h2>{{PageData.Description}}</h2>							
+							<h2>{{PageData.Description}}</h2>
 						</div>
 					</div>
 
@@ -21,12 +21,25 @@
 			</div>
 		</header>
 
+		<div class="main-container">
+			 <!-- SERVICES -->
+            <div id="serviceContainer" class="serviceContainer" isInView (notify)='onNotifyServiceInView($event)'>
+                <stm-services-list></stm-services-list>
+            </div>
 
-		<!--FEATURE ITEMS-->
-		<stm-media-slider [mediaModelList]="PageData.FeatureList" 
+
+            <!-- PORTFOLIO -->
+            <div id="projectContainer" class="projectContainer" isInView (notify)='onNotifyProjectInView($event)'>
+                <stm-projects-list></stm-projects-list>
+            </div>
+		</div>
+
+
+		<!-- FEATURE ITEMS
+		<stm-media-slider [mediaModelList]="PageData.FeatureList"
 							[showType]="true"
 							[showTitle]="true"
-							(onMediaClick)="onMediaClick($event)"></stm-media-slider>
+							(onMediaClick)="onMediaClick($event)"></stm-media-slider> -->
 	</section>
 
 </stm-mobile-header>
