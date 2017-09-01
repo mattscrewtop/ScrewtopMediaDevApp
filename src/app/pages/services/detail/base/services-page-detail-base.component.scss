@@ -11,6 +11,24 @@
 			cdf-media
 			{
 				height: 35rem;
+
+				/deep/
+				{
+					cdf-image
+					{
+						.cdf-background-image
+						{
+							height: 488px;
+							width: 1170px;
+
+							@include bp-small()
+							{
+								height: 244px;
+								width: 600px;
+							}
+						}
+					}
+				}
 			}
 
 			.header-container
