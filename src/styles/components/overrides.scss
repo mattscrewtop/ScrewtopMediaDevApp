@@ -2,3 +2,19 @@
 {
 	margin: 0;
 }
+
+.page-container
+{
+	cdf-image:hover
+	{
+		/deep/
+		{
+			.cdf-background-image
+			{
+				height: 100%;
+				margin: 0;
+				width: 100%;
+			}
+		}
+	}
+}
