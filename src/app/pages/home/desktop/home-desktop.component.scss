@@ -10,18 +10,18 @@
 		{
 			cdf-video-background
 			{
-				height: 17rem;
+				height: 23.75rem;
 
 				// media queries using breakpoints defined in breakpoints.scss
 				@include bp-medium-mid()
 				{
-					height: 35rem;
+					height: 25.63rem;
 				}
 
-				@include bp-large()
-				{
-					height: 80vh;
-				}
+				// @include bp-large()
+				// {
+				// 	height: 80vh;
+				// }
 			}
 		}
 	}
@@ -37,8 +37,14 @@
 		{
 			&[role=page]
 			{
-				height: 80vh;
+				height: 23.75rem;
 				position: relative;
+
+				// media queries using breakpoints defined in breakpoints.scss
+				@include bp-medium-mid()
+				{
+					height: 25.63rem;
+				}
 
 				.shadow
 				{

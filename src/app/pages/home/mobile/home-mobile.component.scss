@@ -10,13 +10,8 @@
 		{
 			cdf-video-background
 			{
-				height: 40vh;
-
-				// media queries using breakpoints defined in breakpoints.scss
-				@include bp-medium()
-				{
-					height: 35rem;
-				}
+				height: 23.75rem;
+				position: relative;
 			}
 
 			.header-container
