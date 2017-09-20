@@ -1,6 +1,10 @@
 @import '../../../../styles/variables.scss';
 @import '../../../../styles/breakpoints.scss';
 
+.jwplayer.jw-stretch-fill video
+{
+	object-fit: unset;
+}
 
 .page-container
 {

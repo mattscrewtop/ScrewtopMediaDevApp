@@ -1,6 +1,37 @@
 @import '../../../../styles/variables.scss';
 @import '../../../../styles/breakpoints.scss';
 
+.jwplayer video
+{
+	&.jw-stretch-fill
+	{
+		video
+		{
+			-o-object-fit: unset !important;
+			object-fit: unset !important;
+		}
+	}
+}
+
+video
+{
+	-o-object-fit: unset !important;
+	object-fit: unset !important;
+}
+
+@mixin responsive
+{
+	// media queries using breakpoints defined in breakpoints.scss
+	@include bp-medium-mid()
+	{
+		height: 25.63rem;
+	}
+
+	@include bp-large()
+	{
+		height: 30rem;
+	}
+}
 
 .page-container
 {
@@ -8,20 +39,26 @@
 	{
 		&[role=page]
 		{
+			@include responsive;
+
 			cdf-video-background
 			{
-				height: 23.75rem;
+				@include responsive;
 
-				// media queries using breakpoints defined in breakpoints.scss
-				@include bp-medium-mid()
+				/deep/
 				{
-					height: 25.63rem;
-				}
+					video
+					{
+						-o-object-fit: unset;
+						object-fit: unset;
 
-				// @include bp-large()
-				// {
-				// 	height: 80vh;
-				// }
+						@include bp-large()
+						{
+							-o-object-fit: contain;
+							object-fit: contain;
+						}
+					}
+				}
 			}
 		}
 	}
@@ -37,14 +74,7 @@
 		{
 			&[role=page]
 			{
-				height: 23.75rem;
 				position: relative;
-
-				// media queries using breakpoints defined in breakpoints.scss
-				@include bp-medium-mid()
-				{
-					height: 25.63rem;
-				}
 
 				.shadow
 				{
