@@ -39,7 +39,7 @@
     "@cdf/cdf-ng": "^2.0.35",
     "@cdf/cdf-ng-contact-us-form": "^1.0.1",
     "@cdf/cdf-ng-media": "^1.2.0",
-    "@titoagudelo/cdf-ng-media": "^1.4.0",
+    "@titoagudelo/cdf-ng-media": "^1.4.1",
     "@types/lodash": "^4.14.44",
     "angular2-jwt": "^0.1.28",
     "angular2-prettyjson": "^2.0.3",
