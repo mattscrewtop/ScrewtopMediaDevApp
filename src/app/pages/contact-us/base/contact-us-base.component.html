@@ -4,24 +4,6 @@
 	<header role="page">
 		<!--PAGE MEDIA-->
 		<cdf-media [mediaModel]="PageData.BackgroundImageModel"></cdf-media>
-
-		<div class="header-container">
-			<div class="row align-middle">
-				<div class="column flex-container flex-dir-column text-center">
-
-					<!--TAGLINES-->
-					<div class="flex-child-shrink">
-						<h2>{{PageData.Tagline}}</h2>
-						<h3>{{PageData.SubTagline}}</h3>
-					</div>
-
-					<!--CALL-TO-ACTION-->
-					<div class="flex-child-shrink">
-						<a class="button hollow opaque small radius" (click)="goToSay($event)">Say Hello...</a>
-					</div>
-				</div>
-			</div>
-		</div>
 	</header>
 
 	<!--MAP-->
