@@ -149,14 +149,42 @@ cdf-media
 			{
 				cdf-media
 				{
-					height: 26rem;
+					@include bp-medium()
+					{
+						height: 20rem;
+					}
+
+					@include bp-medium-mid()
+					{
+						height: 23rem;
+					}
+
+					@include bp-large()
+					{
+						height: 26rem;
+					}
 				}
 
 				.header-container
 				{
 					.row
 					{
-						height: 26rem;
+						height: 15rem;
+
+						@include bp-medium()
+						{
+							height: 20rem;
+						}
+
+						@include bp-medium-mid()
+						{
+							height: 23rem;
+						}
+
+						@include bp-large()
+						{
+							height: 26rem;
+						}
 					}
 				}
 			}
