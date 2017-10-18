@@ -6,27 +6,48 @@
 {
 	cdf-media
 	{
-	    height: 14rem;
+	    height: 10rem;
 		width: auto;
+
 
 		@include bp-small()
 		{
 			height: 8rem;
 		}
 
+		@include bp-custom('min-width: 23.750rem')
+		{
+			height: 13.5rem;
+		}
+
+		@include bp-custom('min-width: 32.500rem')
+		{
+			height: 17rem;
+		}
+
 		@include bp-medium()
 		{
-			height: 19.5rem;
+			height: 20.5rem;
 		}
 
 		@include bp-medium-mid()
 		{
-			height: 25.5rem;
+			height: 23.5rem;
 		}
 
-		@include bp-large()
+		@include bp-medium-mid-max()
 		{
-			height: 30.5rem;
+			height: 28rem;
+		}
+
+		@include bp-medium-max()
+		{
+			height: 32rem;
+		}
+
+		@include bp-large-max()
+		{
+			height: 34rem;
 		}
 	}
 
