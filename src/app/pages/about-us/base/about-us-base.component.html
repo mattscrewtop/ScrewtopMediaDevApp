@@ -65,7 +65,7 @@
 
 				<div class="column small-10 medium-6 large-6">
 					<h3 class="mployee-profile-container__employeeName">{{employee.FirstName}} {{employee.LastName}}</h3>
-					<h4 class="mployee-profile-container__employeeTitle">{{employee.Title}}</h4>
+					<h4 class="mployee-profile-container__employeeTitle employee-title">({{employee.Title}})</h4>
 					<div class="mployee-profile-container__description" [innerHTML]="employee.Description"></div>
 				</div>
 			</section>
