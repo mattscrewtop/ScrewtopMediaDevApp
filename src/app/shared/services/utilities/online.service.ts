@@ -14,7 +14,7 @@ export class OnlineService
 	constructor()
 	{
 		let that = this;
-		let interval = 50000;
+		let interval = 500;
 		let timeOuts = []; 
 
 		if ('onLine' in navigator) 
