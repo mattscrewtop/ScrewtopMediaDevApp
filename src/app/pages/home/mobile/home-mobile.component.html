@@ -5,7 +5,7 @@
 		<!--PAGE HEADER-->
 		<header role="page">
 			<!--MEDIA-->
-			<cdf-video-background [mediaModel]="PageData.BackgroundImageModel"></cdf-video-background>
+			<cdf-video-background [mediaModel]="PageData.BackgroundImageModel" style="height:18.75rem !important;"></cdf-video-background>
 		</header>
 
 		<div class="main-container">
@@ -30,3 +30,7 @@
 	</section>
 
 </stm-mobile-header>
+<script>
+	let myVideo = document.getElementsByClassName("jw-video jw-reset");
+	myVideo[0].play();
+</script>
