@@ -30,6 +30,7 @@
 			],
 			"scripts": 
 			[
+				"assets/js/PlayVideo.js"
 			],
 			"environmentSource": "environments/environment.ts",
 			"environments": 

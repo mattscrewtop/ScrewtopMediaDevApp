@@ -26,7 +26,7 @@ export class AppComponent implements OnInit
             //SUCCESS
             data =>
             {	
-                //console.log('APP COMPONENT IS ONLINE:', data);						
+                //console.log('APP COMPONENT IS ONLINE:', data);
             },
 
             //ERROR
@@ -36,7 +36,7 @@ export class AppComponent implements OnInit
 
             //COMPLETE
             () =>
-            {                 
+            {
             }				
         );
     }
