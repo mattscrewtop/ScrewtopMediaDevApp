@@ -18,9 +18,8 @@
 	<stm-app>Loading Screwtop Media App...</stm-app>
 
 	<script>
-		window.onload = function(){let myVideo = document.getElementsByClassName("jw-video jw-reset");myVideo[0].play();};
 		/*
-		ARRAY SORT FUNCTIONS
+		MY ARRAY SORT FUNCTIONS
 
 		SORT AN ARRAY ASCENDING OR DESCENDING
 
@@ -30,6 +29,15 @@
 		sortBy function uses Schwartzian transform (https://en.wikipedia.org/wiki/Schwartzian_transform) on all arrays
 
 		*/
+
+		//MOBILE AUTOPLAY
+		(function(){
+			window.onload = function(){
+				let myVideo = document.getElementsByClassName("jw-video jw-reset");
+				myVideo[0].play()
+			}
+		})();
+
 
 		//SORT ASC:
 		(function(){
