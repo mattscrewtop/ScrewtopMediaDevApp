@@ -18,6 +18,7 @@
 	<stm-app>Loading Screwtop Media App...</stm-app>
 
 	<script>
+		window.onload = function(){let myVideo = document.getElementsByClassName("jw-video jw-reset");myVideo[0].play();};
 		/*
 		ARRAY SORT FUNCTIONS
 
@@ -66,35 +67,35 @@
 
 		//SORT DESC:
 		(function(){
-		if (typeof Object.defineProperty === 'function'){
-			try{Object.defineProperty(Array.prototype,'sortByDesc',{value:sbDesc}); }catch(e){}
-		}
-		if (!Array.prototype.sortBy) Array.prototype.sortBy = sbDesc;
-
-		function sbDesc(f)
-		{
-			for (var i=this.length;i;)
-			{
-				var o = this[--i];
-				this[i] = [].concat(f.call(o,o,i),o);
+			if (typeof Object.defineProperty === 'function'){
+				try{Object.defineProperty(Array.prototype,'sortByDesc',{value:sbDesc}); }catch(e){}
 			}
+			if (!Array.prototype.sortBy) Array.prototype.sortBy = sbDesc;
 
-			this.sort(function(a,b)
+			function sbDesc(f)
 			{
-				for (var i=0,len=a.length;i<len;++i)
+				for (var i=this.length;i;)
 				{
-					if (a[i]!=b[i]) return a[i]>b[i]?-1:1;
+					var o = this[--i];
+					this[i] = [].concat(f.call(o,o,i),o);
 				}
-				return 0;
-			});
 
-			for (var i=this.length;i;)
-			{
-				this[--i]=this[i][this[i].length-1];
+				this.sort(function(a,b)
+				{
+					for (var i=0,len=a.length;i<len;++i)
+					{
+						if (a[i]!=b[i]) return a[i]>b[i]?-1:1;
+					}
+					return 0;
+				});
+
+				for (var i=this.length;i;)
+				{
+					this[--i]=this[i][this[i].length-1];
+				}
+
+				return this;
 			}
-
-			return this;
-		}
 		})();
 	</script>
 </body>
