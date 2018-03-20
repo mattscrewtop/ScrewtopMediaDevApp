@@ -1,7 +1,7 @@
 import { Injectable } 		from '@angular/core';
 import { BehaviorSubject } 	from 'rxjs/BehaviorSubject';
 import { Observable } 		from 'rxjs/Rx';
-declare function autoPlayVideo(): any;
+
 @Injectable()
 export class OnlineService 
 {
@@ -51,7 +51,7 @@ export class OnlineService
 						//myVideo[0].play();
 						//console.log('IS ONLINE:', navigator.onLine);
 
-						autoPlayVideo();
+						////autoPlayVideo();
 
 					}, interval
 				);
