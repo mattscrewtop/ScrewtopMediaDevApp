@@ -4,9 +4,12 @@
     <section id="homePageTop" class="page-container" *ngIf="PageData">
 
         <!--PAGE HEADER-->
-        <header id="intro" class="text-center" role="page" isInView (notify)='onNotifyHomeInView($event)'>
-            <!--PAGE MEDIA-->
+        <header id="intro" class="text-center" role="page" isInView (notify)='onNotifyHomeInView($event)' style="background-image: url(&quot;https://a022bcec-0c8d-4f5d-b4ad-338c24b49149-hosted.cloudcms.net/static/node/dbaf4b343f54397bb4ba?branchId=c27456c5add2b76e6f5a&quot;);min-height: 43vw;max-width: 100vw;background-size:cover;background-repeat:no-repeat;margin:0 auto;">
+                            <section  class="cdf-background-image"  style="background-image: url(&quot;https://a022bcec-0c8d-4f5d-b4ad-338c24b49149-hosted.cloudcms.net/static/node/68560192e33c1fc8a661?branchId=c27456c5add2b76e6f5a&quot;);min-height: 43vw;max-width: 48vw;background-size:cover;background-repeat:no-repeat;margin:0 auto;">        
+                </section>
+            <!--PAGE MEDIA
             <cdf-video-background [mediaModel]="PageData.BackgroundVideo"></cdf-video-background>
+        -->
         </header>
 
         <!--MAIN CONTENT ON HOME PAGE-->
