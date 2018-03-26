@@ -31,17 +31,17 @@ export class MatchMediaService
 		smallPortrait: 'only screen and (max-width : 20rem) and (orientation : portrait)',
 		smallLandscape: 'only screen and (min-width : 20.0625rem) and (max-width : 39.9999rem) and (orientation : landscape)',
 
-		//63.9375rem = 1023px
-		smallOrMedium: 'only screen and (max-width : 63.9375rem)',
+		//64rem = 1024px
+		smallOrMedium: 'only screen and (max-width : 64rem)',
 
 		//40rem = 640px		
-		//63.9375rem = 1023px
-		medium: 'only screen and (min-width : 40rem) and (max-width : 63.9375rem)',		
-		mediumPortrait: 'only screen and (min-width : 40rem) and (max-width : 63.9375rem) and (orientation : portrait)',
-		mediumLandscape: 'only screen and (min-width : 40rem) and (max-width : 63.9375rem) and (orientation : landscape)',
-
 		//64rem = 1024px
-		large: 'only screen and (min-width: 64rem)',
+		medium: 'only screen and (min-width : 40rem) and (max-width : 64rem)',		
+		mediumPortrait: 'only screen and (min-width : 40rem) and (max-width : 64rem) and (orientation : portrait)',
+		mediumLandscape: 'only screen and (min-width : 40rem) and (max-width : 64rem) and (orientation : landscape)',
+
+		//64.0625rem = 1025px
+		large: 'only screen and (min-width: 64.0625rem)',
 
 		//MISCELLANEOUS
 		landscape: '(orientation: landscape)',
