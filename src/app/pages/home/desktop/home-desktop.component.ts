@@ -196,6 +196,7 @@ export class HomeDesktopComponent implements AfterContentInit, AfterViewInit, On
 		//console.log('*************** APPLPYING SCROLL MAGIC...');
 
 		// pin the intro
+		/*
 		var pinIntroScene = new ScrollMagic.Scene
 			({
 				triggerElement: '#introWelcomeMessage',
@@ -204,7 +205,7 @@ export class HomeDesktopComponent implements AfterContentInit, AfterViewInit, On
 			})
 			.setPin('#introWelcomeMessage', { pushFollowers: false })
 			.addTo(this.scrollMagicController);
-
+		*/
 
 
 
