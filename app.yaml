@@ -11,6 +11,8 @@ handlers:
 - url: /(.*)
   static_files: dist/index.html
   upload: dist/index.html
+  secure: always
+  redirect_http_response_code: 301
 
 
 # Temporary setting to keep gcloud from uploading not required files for deployment
