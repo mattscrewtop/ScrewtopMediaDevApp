@@ -5,9 +5,9 @@
 
 export const environment =
 	{
-		production: false,
+		production: true,
 		envName: 'dev',
-		name: 'Screwtop Media - Development',
+		name: 'Screwtop Media',
 		version: '3.0.0',
 		JW_PLAYER:
 		{
