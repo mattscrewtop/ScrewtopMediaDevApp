@@ -12,14 +12,14 @@ cdf-media-slider
     		height: 275px;
 			width: 275px;
 
-			@include bp-custom('max-width: 840px')
-			{
-				margin: 5px;
-			}
 			@include bp-custom('max-width: 1920px')
 			{
 				margin: 1px;
 				width: 272px;
+			}
+			@include bp-custom('max-width: 840px')
+			{
+				margin: 5px;
 			}
 		}
 
