@@ -49,7 +49,7 @@ export class OnlineService
 					    //let myVideo: HTMLVideoElement = arr[0];
 					    //console.trace(myVideo[0]);
 						//myVideo[0].play();
-						//console.log('IS ONLINE:', navigator.onLine);
+						console.log('IS ONLINE:', navigator.onLine);
 
 						////autoPlayVideo();
 
