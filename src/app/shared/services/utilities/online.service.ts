@@ -29,7 +29,7 @@ export class OnlineService
 						that.isOnline.next(navigator.onLine);
 
 						clearTimeout(timeOuts["uniqueId"]);
-						//checkStatus();
+						checkStatus();
 										    // code here
 
 					    //let videotag = document.getElementsByClassName("jw-video jw-reset");
