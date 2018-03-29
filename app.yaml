@@ -3,16 +3,73 @@ runtime: python27
 threadsafe: yes
 # [END runtime]
 
+default_expiration: "30d"
+
 handlers:
+- url: /manifest.json
+  static_files: manifest.json
+  upload: manifest.json
+  mime_type: application/manifest+json
+  secure: always
+
+- url: /service-worker.js
+  static_files: service-worker.js
+  upload: service-worker.js
+  secure: always
+  expiration: "1s" # "0s" doesn't work
+
 - url: /(.*\.(gif|png|jpg|css|js|otf|eot|svg|ttf|woff|woff2)(|\.map))$
   static_files: dist/\1
   upload: dist/(.*)(|\.map)
+  secure: always
 
-- url: /(.*)
+- url: /(.*\.(appcache|manifest))
+  mime_type: text/cache-manifest
+  static_files: dist/\1
+  upload: dist/(.*\.(appcache|manifest))
+  expiration: "0m"
+  secure: always
+
+- url: /(.*\.json)
+  mime_type: application/json
+  static_files: dist/\1
+  upload: dist/(.*\.json)
+  expiration: "0m"
+  secure: always
+
+# image files
+- url: /(.*\.ico)
+  mime_type: image/x-icon
+  static_files: dist/\1
+  upload: dist/(.*\.ico)
+  expiration: "7d"
+  secure: always
+
+- url: /(.*\.mp4)
+  mime_type: video/mp4
+  static_files: dist/\1
+  upload: dist/(.*\.mp4)
+  secure: always
+
+# index files
+- url: /(.*)/
+  static_files: dist/\1/index.html
+  upload: dist/(.*)/index.html
+  expiration: "15m"
+  secure: always
+
+# site root
+- url: /
   static_files: dist/index.html
   upload: dist/index.html
+  expiration: "15m"
   secure: always
-  redirect_http_response_code: 301
+
+#- url: /(.*)
+#  static_files: dist/index.html
+#  upload: dist/index.html
+#  secure: always
+#  redirect_http_response_code: 301
 
 
 # Temporary setting to keep gcloud from uploading not required files for deployment

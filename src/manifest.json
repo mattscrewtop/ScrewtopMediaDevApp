@@ -2,7 +2,7 @@
   "name": "Screwtop Media - Digital Marketing Solutions",
   "short_name": "ScrewtopMedia",
   "description": "Screwtop Media - Digital Marketing Solutions",
-  "start_url": "index.html",
+  "start_url": "/home?utm_source=homescreen",
   "icons": [
     {
       "src": "assets/images/launcher-icon-6x.png",
