@@ -1,0 +1,16 @@
+{  
+  "short_name": "Screwtop Media - Digital Marketing Solutions",  
+  "name": "Screwtop Media",  
+  "start_url": "./?utm_source=web_app_manifest",  
+  "icons": [  
+    {  
+      "src": "/assets/images/launcher-icon-4x.png",  
+      "sizes": "152x152",  
+      "type": "image/png"  
+    }
+  ],  
+  "background_color": "#FAFAFA",
+  "theme_color": "#0A96CB", 
+  "display": "standalone",  
+  "orientation": "portrait"  
+}
