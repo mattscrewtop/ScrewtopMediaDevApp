@@ -1,0 +1,15 @@
+@import '../../../../styles/variables.scss';
+@import '../../../../styles/breakpoints.scss';
+
+
+.page-container
+{
+	header
+	{
+		&[role=page]
+		{
+			
+		}
+	}
+}
+
