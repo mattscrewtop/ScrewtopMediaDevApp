@@ -25,6 +25,8 @@
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<!-- LIBRARIES -->
+	
+
 	<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -33,11 +35,11 @@
 		ga('create', 'UA-15068679-1', 'auto');
 		ga('send', 'pageview');
 	</script>
+	<link rel="manifest" href="/manifest.json">
 </head>
 
 <body>
 	<stm-app>Loading Screwtop Media App...</stm-app>
-
 	<script>
 		/*
 		ARRAY SORT FUNCTIONS
@@ -50,9 +52,19 @@
 		sortBy function uses Schwartzian transform (https://en.wikipedia.org/wiki/Schwartzian_transform) on all arrays
 
 		*/
-
-
-
+/*
+		if ('serviceWorker' in navigator) {
+		  window.addEventListener('load', function() {
+		    navigator.serviceWorker.register('/assets/js/sw.js').then(function(registration) {
+		      // Registration was successful
+		      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+		    }, function(err) {
+		      // registration failed :(
+		      console.log('ServiceWorker registration failed: ', err);
+		    });
+		  });
+		}
+*/
 
 		//SORT ASC:
 		(function(){
@@ -120,6 +132,34 @@
 				return this;
 			}
 		})();
+	</script>
+	<script>
+		if ('serviceWorker' in navigator) {
+			console.log("Will the service worker register?");
+			navigator.serviceWorker.register('/assets/js/sw.js')
+			.then(function(reg){
+				console.log("Yes, it did.");
+			}).catch(function(err) {
+				console.log("No it didn't. This happened:", err)
+			});
+		}
+		window.addEventListener('beforeinstallprompt', function(e) {
+		  // beforeinstallprompt Event fired
+
+		  // e.userChoice will return a Promise.
+		  // For more details read: https://developers.google.com/web/fundamentals/getting-started/primers/promises
+		  e.userChoice.then(function(choiceResult) {
+
+		    console.log(choiceResult.outcome);
+
+		    if(choiceResult.outcome == 'dismissed') {
+		      console.log('User cancelled home screen install');
+		    }
+		    else {
+		      console.log('User added to home screen');
+		    }
+		  });
+		});
 	</script>
 </body>
 </html>
