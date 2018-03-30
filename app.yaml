@@ -15,17 +15,17 @@ handlers:
 #  upload: favicon\.ico
 #  secure: always
 
-- url: /assets/manifest\.json
+- url: /(.*manifest\.json)
   mime_type: application/manifest+json
-  static_files: assets/manifest.json
-  upload: assets/manifest\.json
+  static_files: dist/\1
+  upload: dist/(.*manifest\.json)
   expiration: "0m"
   secure: always
 
-- url: /assets/sw\.js
+- url: /(.*sw\.js)
   mime_type: application/javascript
-  static_files: assets/sw.js
-  upload: assets/sw\.js
+  static_files: dist/\1
+  upload: dist/(.*sw\.js)
   expiration: "0m"
   secure: always
 
