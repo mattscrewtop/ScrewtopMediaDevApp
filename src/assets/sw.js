@@ -1,5 +1,6 @@
 var CACHE_NAME = 'my-site-cache-v2';
 var urlsToCache = [
+  '/',
   '/main.bundle.js',
   '/vendor.bundle.js',
   '/inline.bundle.js',
