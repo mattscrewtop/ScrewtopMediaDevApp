@@ -1,0 +1,26 @@
+CACHE MANIFEST
+# 2018-03-30:v14
+
+# Explicitly cached 'master entries'.
+CACHE:
+assets/images/Navigation-BG.png
+assets/images/Screwtop-Logo-Isolated.png
+assets/images/logo-Small.png
+main.bundle.js
+vendor.bundle.js
+inline.bundle.js
+styles.bundle.js
+sw.js
+https://a022bcec-0c8d-4f5d-b4ad-338c24b49149-hosted.cloudcms.net/static/node/68560192e33c1fc8a661?branchId=c27456c5add2b76e6f5a
+https://a022bcec-0c8d-4f5d-b4ad-338c24b49149-hosted.cloudcms.net/static/node/dbaf4b343f54397bb4ba?branchId=c27456c5add2b76e6f5a
+
+# Resources that require the user to be online.
+#NETWORK:
+#*
+
+# static.html will be served if main.py is inaccessible
+# offline.jpg will be served in place of all images in images/large/
+# offline.html will be served in place of all other .html files
+##FALLBACK:
+##/main.py /static.html
+##images/large/ images/offline.jpg

@@ -1,13 +1,11 @@
 var CACHE_NAME = 'my-site-cache-v1';
 var urlsToCache = [
-  '/',
-  'assets/images/Navigation-BG.png',
-  'assets/images/Screwtop-Logo-Isolated.png',
-  'assets/images/logo-Small.png',
   'main.bundle.js',
   'vendor.bundle.js',
   'inline.bundle.js',
-  'styles.bundle.js'
+  'styles.bundle.js',
+  'https://a022bcec-0c8d-4f5d-b4ad-338c24b49149-hosted.cloudcms.net/static/node/68560192e33c1fc8a661?branchId=c27456c5add2b76e6f5a',
+  'https://a022bcec-0c8d-4f5d-b4ad-338c24b49149-hosted.cloudcms.net/static/node/dbaf4b343f54397bb4ba?branchId=c27456c5add2b76e6f5a'
   ];
 
 self.addEventListener('install', function(event) {

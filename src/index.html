@@ -12,6 +12,7 @@
 	<meta name="description" content="ScrewtopMedia" />
 	<meta name="theme-color" content="#0A96CB" />
 	<meta name="author" content="Matt Ferrell" />
+    <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
@@ -143,15 +144,32 @@
 				console.log("No it didn't. This happened:", err)
 			});
 		}
+		// Check if a new cache is available on page load.
+		window.addEventListener('load', function(e) {
+			//setInterval(function() { window.applicationCache.update(); }, 3600000);
+
+		  window.applicationCache.addEventListener('updateready', function(e) {
+		    if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
+		      // Browser downloaded a new app cache.
+		      if (confirm('A new version of this site is available. Load it?')) {
+		      	window.applicationCache.update();
+		      	window.applicationCache.swapCache();
+		        //window.location.reload();
+		      }
+		    } else {
+		      // Manifest didn't changed. Nothing new to server.
+		    }
+		  }, false);
+
+		}, false);
+		
 		window.addEventListener('beforeinstallprompt', function(e) {
 		  // beforeinstallprompt Event fired
 
 		  // e.userChoice will return a Promise.
 		  // For more details read: https://developers.google.com/web/fundamentals/getting-started/primers/promises
 		  e.userChoice.then(function(choiceResult) {
-
 		    console.log(choiceResult.outcome);
-
 		    if(choiceResult.outcome == 'dismissed') {
 		      console.log('User cancelled home screen install');
 		    }

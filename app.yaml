@@ -19,20 +19,22 @@ handlers:
   mime_type: application/manifest+json
   static_files: manifest.json
   upload: manifest\.json
+  expiration: "0m"
   secure: always
 
 - url: /sw\.js
   mime_type: application/javascript
   static_files: sw.js
   upload: sw\.js
-  secure: always
-
-- url: /(.*\.(appcache|manifest))
-  mime_type: text/cache-manifest
-  static_files: dist/\1
-  upload: dist/(.*\.(appcache|manifest))
   expiration: "0m"
   secure: always
+
+#- url: /manifest\.appcache)
+#  mime_type: text/cache-manifest
+#  static_files: manifest.appcache
+#  upload: manifest\.appcache
+#  expiration: "0m"
+#  secure: always
 
 - url: /(.*\.json)
   mime_type: application/json
