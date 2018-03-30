@@ -1,5 +1,6 @@
 import { Injectable } 			from '@angular/core';
-import { Observable } 			from 'rxjs/Rx';
+import { Observable } 			from 'rxjs/Observable';
+import { Observer } 			from 'rxjs/Observer';
 import
 {
 	CdfDataService,
@@ -25,7 +26,7 @@ export class DataService
 		//RETURN PAGE DATA IF IT'S KNOWN
 		if (this.SocialMediaList)
 		{
-			return Observable.create(observer =>
+			return Observable.create((observer: Observer<string>) =>
 			{
 				observer.next(this.SocialMediaList);
 				observer.complete();
@@ -33,7 +34,7 @@ export class DataService
 		}
 		else
 		{
-			return Observable.create(observer =>
+			return Observable.create((observer: Observer<string>) =>
 			{
 				let queryParams = 'limit=-1&metadata=false&full=true&sort={"title":1}';
 				let body: Object = { "_type": "type:social-media" };

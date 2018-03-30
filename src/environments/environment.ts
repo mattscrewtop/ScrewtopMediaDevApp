@@ -5,7 +5,7 @@
 
 export const environment =
 	{
-		production: true,
+		production: false,
 		envName: 'dev',
 		name: 'Screwtop Media',
 		version: '3.0.0',
@@ -47,7 +47,7 @@ export const environment =
 		},
 		CDF_API:
 		{
-			ROOT_URL: 'http://cdf-api-local.webapi.cdf.cloud/api/',
+			ROOT_URL: 'https://cdf-api-local.webapi.cdf.cloud/api/',
 			ApplicationKey: "a8108d99-e3b2-4a60-bfce-9983fc822928",
 			Content:
 			{

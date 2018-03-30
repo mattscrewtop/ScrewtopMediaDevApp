@@ -21,7 +21,11 @@ self.addEventListener('install', function(event) {
     caches.open(CACHE_NAME)
       .then(function(cache) {
         console.log('Opened cache');
-        return cache.addAll(urlsToCache);
+
+        return cache.addAll(urlsToCache.map(function(urlToCache) {
+          Request(urlToCache, { mode: 'no-cors' });
+        }));
+        ////return cache.addAll(urlsToCache);
       })
   );
 });

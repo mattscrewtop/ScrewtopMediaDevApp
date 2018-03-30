@@ -12,9 +12,7 @@
 			"assets": 
 			[
 				"assets",
-				"favicon.ico",
-				"splash.png",
-				"icon.png"
+				"favicon.ico"
 			],
 			"index": "index.html",
 			"main": "main.ts",
@@ -25,6 +23,7 @@
 			"styles": 
 			[
 				"assets/styles/font-awesome.min.css",
+				"assets/styles/slideout.scss",
 				"assets/styles/ng2-toastr.min.css",
 				"styles.scss"
 			],
@@ -35,8 +34,7 @@
 			"environments": 
 			{
 				"dev": "environments/environment.ts",
-				"prod": "environments/environment.prod.ts",
-				"stage": "environments/environment.stage.ts"
+				"prod": "environments/environment.prod.ts"
 			}
 		}
 	],

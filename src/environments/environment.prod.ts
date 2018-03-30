@@ -6,7 +6,7 @@
 export const environment =
 	{
 		production: true,
-		envName: 'prod',
+		envName: 'dev',
 		name: 'Screwtop Media',
 		version: '3.0.0',
 		JW_PLAYER:
@@ -28,7 +28,7 @@ export const environment =
 		{
 			ROOT_URL: 'https://api.cloudcms.com',
 			RepositoryId: '0fdddfe701d019e22471',
-			BranchId: 'af13eaa1decfed3e97aa',
+			BranchId: 'c27456c5add2b76e6f5a',
 			MEDIA_URL: 'https://a022bcec-0c8d-4f5d-b4ad-338c24b49149-hosted.cloudcms.net/static/node',
 			Content:
 			{

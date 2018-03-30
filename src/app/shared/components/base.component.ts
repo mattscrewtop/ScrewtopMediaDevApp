@@ -3,7 +3,7 @@ import { Component, NgZone } from '@angular/core';
 import { MatchMediaService } from '../services/utilities/match-media.service';
 
 @Component({
-	selector: 'dfwsb-base',
+	selector: 'stm-base',
 	template: '<ng-content></ng-content>',
 	providers: []
 })
