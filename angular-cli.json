@@ -13,8 +13,8 @@
 			[
 				"assets",
 				"favicon.ico",
-				"manifest.json",
-				"sw.js",
+				"assets/manifest.json",
+				"assets/sw.js",
 				"splash.png",
 				"icon.png"
 			],

@@ -23,7 +23,7 @@
     <link rel="apple-touch-icon" sizes="152x152" href="assets/images/launcher-icon-4x.png" />
     <link rel="apple-touch-startup-image" href="assets/images/splash.png" />
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-	<link rel="manifest" href="manifest.json">
+	<link rel="manifest" href="assets/manifest.json">
 	<meta name="theme-color" content="#0A96CB">
 
 	<!-- LIBRARIES -->
@@ -137,7 +137,7 @@
 	<script>
 		if ('serviceWorker' in navigator) {
 			console.log("Will the service worker register?");
-			navigator.serviceWorker.register('sw.js')
+			navigator.serviceWorker.register('assets/sw.js')
 			.then(function(reg){
 				console.log("Yes,  it did.");
 			}).catch(function(err) {
