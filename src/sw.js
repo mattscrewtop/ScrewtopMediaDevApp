@@ -1,11 +1,14 @@
 var CACHE_NAME = 'my-site-cache-v1';
 var urlsToCache = [
-  '/assets/images/Navigation-BG.png',
-  '/assets/images/Screwtop-Logo-Isolated.png',
-  '/assets/images/logo-Small.png',
-  '/main.bundle.js',
-  '/vendor.bundle.js'
-];
+  '/',
+  'assets/images/Navigation-BG.png',
+  'assets/images/Screwtop-Logo-Isolated.png',
+  'assets/images/logo-Small.png',
+  'main.bundle.js',
+  'vendor.bundle.js',
+  'inline.bundle.js',
+  'styles.bundle.js'
+  ];
 
 self.addEventListener('install', function(event) {
   // Perform install steps

@@ -3,24 +3,28 @@ runtime: python27
 threadsafe: yes
 # [END runtime]
 
-default_expiration: "30d"
+default_expiration: "7d"
 
 handlers:
-- url: /manifest.json
-  static_files: manifest.json
-  upload: manifest.json
+#- url: /assets
+#  static_dir: assets
+#  application_readable: true
+
+#- url: /favicon\.ico
+#  static_files: favicon.ico
+#  upload: favicon\.ico
+#  secure: always
+
+- url: /manifest\.json
   mime_type: application/manifest+json
+  static_files: manifest.json
+  upload: manifest\.json
   secure: always
 
-- url: /service-worker.js
-  static_files: service-worker.js
-  upload: service-worker.js
-  secure: always
-  expiration: "1s" # "0s" doesn't work
-
-- url: /(.*\.(gif|png|jpg|css|js|otf|eot|svg|ttf|woff|woff2)(|\.map))$
-  static_files: dist/\1
-  upload: dist/(.*)(|\.map)
+- url: /sw\.js
+  mime_type: application/javascript
+  static_files: sw.js
+  upload: sw\.js
   secure: always
 
 - url: /(.*\.(appcache|manifest))
@@ -34,15 +38,6 @@ handlers:
   mime_type: application/json
   static_files: dist/\1
   upload: dist/(.*\.json)
-  expiration: "0m"
-  secure: always
-
-# image files
-- url: /(.*\.ico)
-  mime_type: image/x-icon
-  static_files: dist/\1
-  upload: dist/(.*\.ico)
-  expiration: "7d"
   secure: always
 
 - url: /(.*\.mp4)
@@ -51,26 +46,62 @@ handlers:
   upload: dist/(.*\.mp4)
   secure: always
 
-# index files
-- url: /(.*)/
-  static_files: dist/\1/index.html
-  upload: dist/(.*)/index.html
-  expiration: "15m"
+- url: /(.*\.(gif|png|jpg|css|js|otf|eot|svg|ttf|woff|woff2)(|\.map))$
+  static_files: dist/\1
+  upload: dist/(.*)(|\.map)
   secure: always
 
-# site root
-- url: /
-  static_files: dist/index.html
-  upload: dist/index.html
-  expiration: "15m"
+# Routing for bundles to serve directly
+- url: /((?:inline|main|polyfills|styles|vendor)\.[a-z0-9]+\.bundle\.js)
   secure: always
+  redirect_http_response_code: 301
+  static_files: dist/\1
+  upload: dist/.*
+
+# Routing for a prod styles.bundle.css to serve directly
+- url: /(styles\.[a-z0-9]+\.bundle\.css)
+  secure: always
+  redirect_http_response_code: 301
+  static_files: dist/\1
+  upload: dist/.*
+
+# Routing for typedoc, assets and favicon.ico to serve directly
+- url: /((?:assets|docs)/.*|favicon\.ico)
+  secure: always
+  redirect_http_response_code: 301
+  static_files: dist/\1
+  upload: dist/.*
+
+# Any other requests are routed to index.html for angular to handle so we don't need hash URLs
+- url: /.*
+  secure: always
+  redirect_http_response_code: 301
+  static_files: dist/index.html
+  upload: dist/index\.html
+  http_headers:
+    Strict-Transport-Security: max-age=31536000; includeSubDomains
+    X-Frame-Options: DENY
+
+# index files
+#- url: (.*)/
+#  static_files: dist\1/index.html
+#  upload: dist
+#  expiration: "5m"
+#  secure: always
+
+#- url: (.*)
+#  static_files: dist\1
+#  upload: dist
+
+  #redirect_http_response_code: 301
+
+#- url: /(.*\.(gif|png|jpg|css|js|otf|eot|svg|ttf|woff|woff2)(|\.map))$
+#  static_files: dist/\1
+#  upload: dist/(.*)(|\.map)
 
 #- url: /(.*)
 #  static_files: dist/index.html
 #  upload: dist/index.html
-#  secure: always
-#  redirect_http_response_code: 301
-
 
 # Temporary setting to keep gcloud from uploading not required files for deployment
 skip_files:
