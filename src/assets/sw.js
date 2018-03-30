@@ -1,10 +1,16 @@
-var CACHE_NAME = 'my-site-cache-v2';
+var CACHE_NAME = 'my-site-cache-v3';
 var urlsToCache = [
   '/',
   '/main.bundle.js',
   '/vendor.bundle.js',
   '/inline.bundle.js',
   '/styles.bundle.js',
+  '/assets/images/Navigation-BG.png',
+  '/assets/images/launcher-icon-4x.png',
+  '/assets/images/logo-Small.png',
+  '/fontawesome-webfont.af7ae505a9eed503f8b8.woff2',
+  '/assets/fonts/OpenSans/OpenSans-Regular-webfont.woff',
+  '/assets/fonts/OpenSans/OpenSans-Bold-webfont.woff',
   'https://a022bcec-0c8d-4f5d-b4ad-338c24b49149-hosted.cloudcms.net/static/node/68560192e33c1fc8a661?branchId=c27456c5add2b76e6f5a',
   'https://a022bcec-0c8d-4f5d-b4ad-338c24b49149-hosted.cloudcms.net/static/node/dbaf4b343f54397bb4ba?branchId=c27456c5add2b76e6f5a'
   ];
@@ -62,7 +68,7 @@ self.addEventListener('fetch', function(event) {
 
 self.addEventListener('activate', function(event) {
 
-  var cacheWhitelist = ['my-site-cache-v2'];
+  var cacheWhitelist = ['my-site-cache-v3'];
 
   event.waitUntil(
     caches.keys().then(function(cacheNames) {
