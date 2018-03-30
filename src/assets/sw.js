@@ -1,4 +1,4 @@
-var CACHE_NAME = 'my-site-cache-v1';
+var CACHE_NAME = 'my-site-cache-v2';
 var urlsToCache = [
   '/main.bundle.js',
   '/vendor.bundle.js',
@@ -61,7 +61,7 @@ self.addEventListener('fetch', function(event) {
 
 self.addEventListener('activate', function(event) {
 
-  var cacheWhitelist = ['my-site-cache-v1'];
+  var cacheWhitelist = ['my-site-cache-v2'];
 
   event.waitUntil(
     caches.keys().then(function(cacheNames) {
