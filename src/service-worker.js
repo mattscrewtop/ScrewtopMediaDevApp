@@ -1,5 +1,5 @@
 // Load the sw-tookbox library.
-//importScripts('./sw-toolbox.js');
+importScripts('./sw-toolbox.js');
 importScripts('./runtime-caching.js');
 
 
