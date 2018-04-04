@@ -22,10 +22,10 @@ handlers:
   expiration: "0m"
   secure: always
 
-- url: /(.*sw\.js)
+- url: /(.*service-worker\.js)
   mime_type: application/javascript
   static_files: dist/\1
-  upload: dist/(.*sw\.js)
+  upload: dist/(.*service-worker\.js)
   expiration: "0m"
   secure: always
 

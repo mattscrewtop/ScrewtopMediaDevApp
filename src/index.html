@@ -6,7 +6,6 @@
 	<base href="/">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-  
 	<meta name="format-detection" content="telephone=no" />
 	<meta name="msapplication-tap-highlight" content="no" />
 	<meta name="description" content="ScrewtopMedia" />
@@ -24,7 +23,9 @@
     <link rel="apple-touch-startup-image" href="assets/images/splash.png" />
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 	<link rel="manifest" href="assets/manifest.json">
-	<meta name="theme-color" content="#0A96CB">
+
+	<!--STYLES-->
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
 
 	<!-- LIBRARIES -->
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -41,6 +42,7 @@
 
 <body>
 	<stm-app>Loading Screwtop Media App...</stm-app>
+
 	<script>
 		/*
 		ARRAY SORT FUNCTIONS
@@ -53,19 +55,7 @@
 		sortBy function uses Schwartzian transform (https://en.wikipedia.org/wiki/Schwartzian_transform) on all arrays
 
 		*/
-/*
-		if ('serviceWorker' in navigator) {
-		  window.addEventListener('load', function() {
-		    navigator.serviceWorker.register('/assets/js/sw.js').then(function(registration) {
-		      // Registration was successful
-		      console.log('ServiceWorker registration successful with scope: ', registration.scope);
-		    }, function(err) {
-		      // registration failed :(
-		      console.log('ServiceWorker registration failed: ', err);
-		    });
-		  });
-		}
-*/
+
 
 		//SORT ASC:
 		(function(){
@@ -133,88 +123,27 @@
 				return this;
 			}
 		})();
-	</script>
-	<script>
-		if ('serviceWorker' in navigator) {
-			console.log("Will the service worker register?");
-			navigator.serviceWorker.register('assets/sw.js')
-			.then(function(reg){
-				console.log("Yes,  it did.");
-			}).catch(function(err) {
-				console.log("No it didn't. This happened:", err)
-			});
+
+
+		//LOAD SERVICE WORKER...
+		if ('serviceWorker' in navigator) 
+		{
+			navigator.serviceWorker.register('service-worker.js')
+			.then
+			(
+				function(registration) 
+				{
+					console.log('Service Worker registered sparky', registration);
+				}
+			)
+			.catch
+			(
+				function(err) 
+				{
+					console.log('Service Worker registration failed yo: ', err);
+				}
+			);
 		}
-		// Check if a new cache is available on page load.
-		window.addEventListener('load', function(e) {
-			//setInterval(function() { window.applicationCache.update(); }, 3600000);
-
-		  window.applicationCache.addEventListener('updateready', function(e) {
-		    if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
-		      // Browser downloaded a new app cache.
-		      if (confirm('A new version of this site is available. Load it?')) {
-		      	window.applicationCache.update();
-		      	window.applicationCache.swapCache();
-		        //window.location.reload();
-		      }
-		    } else {
-		      // Manifest didn't changed. Nothing new to server.
-		    }
-		  }, false);
-
-		}, false);
-		
-		window.addEventListener('beforeinstallprompt', function(e) {
-		  // beforeinstallprompt Event fired
-
-		  // e.userChoice will return a Promise.
-		  // For more details read: https://developers.google.com/web/fundamentals/getting-started/primers/promises
-		  e.userChoice.then(function(choiceResult) {
-		    console.log(choiceResult.outcome);
-		    if(choiceResult.outcome == 'dismissed') {
-		      console.log('User cancelled home screen install');
-		    }
-		    else {
-		      console.log('User added to home screen');
-		    }
-		  });
-		});
-/*
-		var deferredPrompt;
-
-		window.addEventListener('beforeinstallprompt', function(e) {
-		  console.log('beforeinstallprompt Event fired');
-		  e.preventDefault();
-
-		  // Stash the event so it can be triggered later.
-		  deferredPrompt = e;
-
-		  return false;
-		});
-
-		btnSave.addEventListener('click', function() {
-		  if(deferredPrompt !== undefined) {
-		    // The user has had a positive interaction with our app and Chrome
-		    // has tried to prompt previously, so let's show the prompt.
-		    deferredPrompt.prompt();
-
-		    // Follow what the user has done with the prompt.
-		    deferredPrompt.userChoice.then(function(choiceResult) {
-
-		      console.log(choiceResult.outcome);
-
-		      if(choiceResult.outcome == 'dismissed') {
-		        console.log('User cancelled home screen install');
-		      }
-		      else {
-		        console.log('User added to home screen');
-		      }
-
-		      // We no longer need the prompt.  Clear it up.
-		      deferredPrompt = null;
-		    });
-		  }
-		});
-*/
 	</script>
 </body>
 </html>
