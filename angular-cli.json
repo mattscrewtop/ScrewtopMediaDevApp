@@ -1,7 +1,7 @@
 {
 	"project": 
 	{
-		"version": "1.0.1",
+		"version": "3.1.0",
 		"name": "screwtop-media"
 	},
 	"apps": 
@@ -14,8 +14,7 @@
 				"assets",
 				"favicon.ico",
   				"service-worker.js",
-  				"runtime-caching.js",
-  				"sw-toolbox.js"
+  				"manifest.json"
 			],
 			"index": "index.html",
 			"main": "main.ts",

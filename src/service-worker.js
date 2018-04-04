@@ -1,11 +1,11 @@
 // Load the sw-tookbox library.
-importScripts('./sw-toolbox.js');
-importScripts('./runtime-caching.js');
+//importScripts('./sw-toolbox.js');
+//importScripts('./runtime-caching.js');
 
 
 
 // tick this to make the cache invalidate and update
-const CACHE_VERSION = 45090;
+const CACHE_VERSION = 3100;
 const CURRENT_CACHES =
 	{
 		'app-shell': 'app-shell-cache-v' + CACHE_VERSION,
@@ -15,22 +15,11 @@ const CURRENT_CACHES =
 //APP SHELL FILES...
 var filesToCache = 
 [
-	'/',
-	'/index.html',
-	'/main.bundle.js',
-	'/vendor.bundle.js',
-	'/inline.bundle.js',
-	'/styles.bundle.js',
-	'/assets/images/Navigation-BG.png',
-	'/assets/images/launcher-icon-4x.png',
-	'/assets/images/logo-Small.png',
-	'/fontawesome-webfont.af7ae505a9eed503f8b8.woff2',
-	'/assets/fonts/OpenSans/OpenSans-Regular-webfont.woff',
-	'/assets/fonts/OpenSans/OpenSans-Bold-webfont.woff'
+	'/'
 	//'/manifest.json'
 ];
 
-var cacehableRequestsList = ['screwtopmedia', 'googleapis', 'cloudcms', 'cdf'];
+var cacehableRequestsList = ['screwtopmedia', 'googleapis', 'gstatic', 'jwpcdn', 'cloudcms', 'cdf'];
 
 
 //WHILE INSTALLING SERVICE WORKER, CACHE APP SHELL...

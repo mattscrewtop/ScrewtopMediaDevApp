@@ -1,6 +1,6 @@
 {
   "name": "screwtopmedia",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "license": "MIT",
   "angular-cli": {},
   "scripts": {
@@ -69,9 +69,7 @@
     "ts-helpers": "^1.1.1",
     "twitter": "^1.5.0",
     "yarn": "^0.27.5",
-    "zone.js": "^0.7.6",
-    "sw-precache": "^4.2.3",
-    "sw-toolbox": "^3.4.0"
+    "zone.js": "^0.7.6"
   },
   "devDependencies": {
     "@angular/cli": "1.0.0-rc.1",

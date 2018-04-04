@@ -22,12 +22,12 @@ handlers:
   expiration: "0m"
   secure: always
 
-- url: /(.*service-worker\.js)
-  mime_type: application/javascript
-  static_files: dist/\1
-  upload: dist/(.*service-worker\.js)
-  expiration: "0m"
-  secure: always
+#- url: /(.*service-worker\.js)
+#  mime_type: application/javascript
+#  static_files: dist/\1
+#  upload: dist/(.*service-worker\.js)
+#  expiration: "0m"
+#  secure: always
 
 #- url: /manifest\.appcache)
 #  mime_type: text/cache-manifest
